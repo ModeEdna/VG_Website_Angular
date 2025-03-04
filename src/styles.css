@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary-color: #ef3415;
+  --text-color: #2b3240;
+  --bg-light: #f1f1f1;
+  --bg-white: #ffffff;
+  --bg-carousel: rgba(100, 150, 50, 0.5);
+  --bg-cards: rgb(245, 245, 245);
+  --scroll-btn-color: rgb(156, 156, 160);
+  --scroll-btn-bg: rgba(231, 231, 236, 0.8);
+  --scroll-btn-hover: rgba(210, 210, 215, 0.8);
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.12);
+  --indicator-inactive: rgba(255, 255, 255, 0.4);
+  --indicator-active: rgba(255, 255, 255, 0.8);
+
+  /* Spacing */
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 30px;
+
+  /* Typography */
+  --font-family: "Roboto", sans-serif;
+  --font-size-normal: 18px;
+  --font-size-small: 14px;
+  --font-size-large: 48px;
+
+  /* Animation */
+  --transition-standard: 0.3s ease;
+  --transition-long: width 30s linear;
+
+  /* Dimensions */
+  --navbar-height: 60px;
+  --border-radius: 1rem;
+  --indicator-size: 15px;
+  --card-width: 18rem;
+  --card-height: 24rem;
+  --scroll-button-size: 50px;
+}
+
+/* General styles */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-cards);
+}
+
+body {
+  height: 100%;
+  padding-top: var(
+    --navbar-height
+  ); /* Add padding to account for fixed navbar */
+}
+
+.container {
+  display: flex;
+  height: calc(
+    100% - var(--navbar-height)
+  ); /* Adjust height to account for navbar */
+  width: 100%;
+  background-color: var(--bg-light);
+  flex-direction: column;
+}

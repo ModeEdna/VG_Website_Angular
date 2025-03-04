@@ -1,0 +1,331 @@
+/* Navbar styles */
+.navbar {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  padding: var(--space-sm) var(--space-md);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid var(--primary-color);
+  box-sizing: border-box; /* Include border in element's total height */
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  position: absolute;
+  right: var(--space-md);
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-color);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu styles */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--bg-light);
+  overflow: hidden;
+  transition: height 0.4s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile menu styles - fix for all link types */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu li {
+  margin: var(--space-md) 0;
+  text-align: center;
+  width: 100%;
+  list-style: none;
+}
+
+/* Fix ALL mobile links - both regular and dropdown */
+.mobile-menu a,
+.mobile-menu .dropdown-button {
+  font-size: 1.2rem;
+  padding: var(--space-md);
+  width: 100%;
+  display: block;
+  color: var(--text-color); /* Use standard text color for all links */
+  text-decoration: none; /* Remove underlines from all links */
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  font-family: var(--font-family);
+}
+
+.mobile-menu a:hover,
+.mobile-menu .dropdown-button:hover {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Fix dropdown specific styling */
+.mobile-menu .dropdown-container {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu .dropdown-button {
+  background: transparent;
+  border: none;
+  margin: 0;
+  margin-left: 20px;
+}
+
+/* New dropdown animation styles */
+.mobile-menu .dropdown-content {
+  position: static;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 0;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.mobile-menu .dropdown-container.show .dropdown-content {
+  max-height: 300px; /* Set to a value that will accommodate your dropdown content */
+  opacity: 1;
+}
+
+.mobile-menu .dropdown-content a {
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: var(--space-md);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+/* Force consistency by removing browser defaults */
+.mobile-menu a,
+.mobile-menu a:link,
+.mobile-menu a:visited,
+.mobile-menu a:hover,
+.mobile-menu a:active {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.mobile-menu a:hover,
+.mobile-menu .dropdown-button:hover {
+  color: var(--primary-color);
+}
+
+/* Remove any default styling for lists */
+.mobile-menu ul,
+.mobile-menu ol,
+.mobile-menu .dropdown-content {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Show mobile menu when active */
+.mobile-overlay.active {
+  height: 100%;
+}
+
+/* Hamburger animation for active state */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.navbar-logo {
+  position: absolute;
+  left: var(--space-md);
+}
+
+.navbar-logo img {
+  height: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 var(--space-md);
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: color var(--transition-standard);
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.navbar a:hover,
+.dropdown-button:hover {
+  color: var(--primary-color);
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  background-color: var(--bg-light);
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: var(--font-size-small);
+}
+
+.dropdown-content a:hover {
+  color: var(--primary-color);
+}
+
+.dropdown-container.show .dropdown-content,
+.dropdown-container:hover .dropdown-content {
+  display: block;
+}
+
+/* Override desktop behavior for mobile */
+@media (max-width: 950px) {
+  .dropdown-container:hover .dropdown-content {
+    display: none; /* Don't show on hover for mobile */
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu .dropdown-container.show .dropdown-content {
+    display: block;
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 2000px) {
+  .card {
+    height: 14rem;
+    width: 10.5rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .card {
+    height: 10rem;
+    width: 7.5rem;
+  }
+}
+
+@media (max-height: 530px) {
+  .card {
+    height: 8rem;
+    width: 6rem;
+  }
+}
+
+@media (max-height: 450px) {
+  .card {
+    height: 6rem;
+    width: 4.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* align list to the right once width reaches 1350*/
+@media (max-width: 1350px) {
+  .navbar ul {
+    margin-left: auto;
+  }
+
+  .navbar li {
+    margin: 0;
+  }
+
+  .navbar li:last-child {
+    margin-right: var(--space-md);
+  }
+}
+
+/* Media query for navbar at 950px or less */
+@media (max-width: 950px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}

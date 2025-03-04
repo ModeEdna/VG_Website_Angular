@@ -1,0 +1,7 @@
+.container {
+  padding-top: var(--navbar-height);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
