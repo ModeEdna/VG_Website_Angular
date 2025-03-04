@@ -2,15 +2,21 @@
 <nav class="navbar">
   <div class="navbar-logo">
     <a href="#">
-      <img src="src/assets/VG_Logo.svg" alt="Venture Global Logo" />
+      <img src="VG_Logo.svg" alt="Venture Global Logo" />
     </a>
   </div>
+
   <!-- Hamburger Menu Button -->
-  <div class="hamburger">
+  <div
+    class="hamburger"
+    [class.active]="isMobileMenuOpen"
+    (click)="toggleMobileMenu()"
+  >
     <span></span>
     <span></span>
     <span></span>
   </div>
+
   <!-- Regular Desktop Menu -->
   <ul>
     <li><a href="#">HOME</a></li>
@@ -28,3 +34,32 @@
     <li><a href="#">CONTACT</a></li>
   </ul>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div
+  class="mobile-overlay"
+  [class.active]="isMobileMenuOpen"
+  (click)="onOverlayClick($event)"
+>
+  <ul class="mobile-menu">
+    <li><a href="#" (click)="closeMenu()">HOME</a></li>
+    <li class="dropdown-container">
+      <button
+        #mobileDropdownButton
+        class="dropdown-button"
+        (click)="toggleDropdown($event, mobileDropdownButton)"
+      >
+        Analytics
+      </button>
+      <div class="dropdown-content">
+        <a href="#" (click)="closeMenu()">Option 1</a>
+        <a href="#" (click)="closeMenu()">Option 2</a>
+        <a href="#" (click)="closeMenu()">Option 3</a>
+      </div>
+    </li>
+    <li><a href="#" (click)="closeMenu()">LEARN</a></li>
+    <li><a href="#" (click)="closeMenu()">POLICIES</a></li>
+    <li><a href="#" (click)="closeMenu()">ABOUT</a></li>
+    <li><a href="#" (click)="closeMenu()">CONTACT</a></li>
+  </ul>
+</div>

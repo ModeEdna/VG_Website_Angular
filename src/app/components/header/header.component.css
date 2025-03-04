@@ -179,6 +179,7 @@
 .navbar-logo {
   position: absolute;
   left: var(--space-md);
+  margin-top: 5px;
 }
 
 .navbar-logo img {
