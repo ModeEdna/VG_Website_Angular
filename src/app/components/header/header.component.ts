@@ -1,7 +1,6 @@
 import {
   Component,
   ElementRef,
-  HostListener,
   QueryList,
   ViewChildren,
   AfterViewInit,

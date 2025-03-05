@@ -228,6 +228,8 @@
   text-transform: uppercase;
   color: var(--text-color);
   cursor: pointer;
+  /* transition: color(var(--transition-standard)); */
+  transition: color var(--transition-standard);
 }
 
 .dropdown-content {
