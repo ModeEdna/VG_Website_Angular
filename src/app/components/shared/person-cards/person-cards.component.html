@@ -1,0 +1,35 @@
+<!-- Create profile cards for employees with a small, circular image on the left, a name and title to the right of the image, and three buttons underneath for contact, bio, and skills.
+ Do it without angular for now; i want to build the skeleton firs -->
+<div *ngIf="loading">Loading employee data...</div>
+
+<div *ngIf="error" class="error">
+  {{ error }}
+</div>
+
+<div class="employee-cards" *ngIf="employees.length > 0">
+  <div class="person-cards-container">
+    <div class="person-card" *ngFor="let employee of employees">
+      <div class="card-header">
+        <div class="person-image">
+          <img
+            [src]="employee.image || 'assets/placeholder-profile.jpg'"
+            alt="{{ employee.name }}"
+          />
+        </div>
+        <div class="person-info">
+          <h3>{{ employee.name }}</h3>
+          <h4>{{ employee.title }}</h4>
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-bio">Bio</button>
+        <button class="btn btn-contact">Contact</button>
+        <button class="btn btn-skills">Skills</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!loading && !error && employees.length === 0">
+  No employee data available.
+</div>
