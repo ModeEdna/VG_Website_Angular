@@ -22,9 +22,18 @@
         </div>
       </div>
       <div class="button-group">
-        <button class="btn btn-bio">Bio</button>
-        <button class="btn btn-contact">Contact</button>
-        <button class="btn btn-skills">Skills</button>
+        <button class="btn btn-bio" (click)="openModal(employee, 'bio')">
+          Bio
+        </button>
+        <button
+          class="btn btn-contact"
+          (click)="openModal(employee, 'contact')"
+        >
+          Contact
+        </button>
+        <button class="btn btn-skills" (click)="openModal(employee, 'skills')">
+          Skills
+        </button>
       </div>
     </div>
   </div>
@@ -33,3 +42,6 @@
 <div *ngIf="!loading && !error && employees.length === 0">
   No employee data available.
 </div>
+
+<!-- Add the modal component -->
+<app-modal></app-modal>

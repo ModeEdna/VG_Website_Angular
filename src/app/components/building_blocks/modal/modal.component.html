@@ -1,0 +1,46 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="closeOnOverlayClick($event)">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h2>{{ personData?.name }}</h2>
+      <button class="close-button" (click)="close()">×</button>
+    </div>
+
+    <div class="modal-content">
+      <div class="person-image" *ngIf="personData?.imageUrl">
+        <img [src]="personData?.imageUrl" [alt]="personData?.name" />
+      </div>
+
+      <div
+        class="section"
+        id="bio-section"
+        [class.active]="personData?.activeSection === 'bio'"
+      >
+        <h3>Biography</h3>
+        <p>{{ personData?.bio }}</p>
+      </div>
+
+      <div
+        class="section"
+        id="skills-section"
+        [class.active]="personData?.activeSection === 'skills'"
+      >
+        <h3>Skills</h3>
+        <ul>
+          <li *ngFor="let skill of personData?.skills">{{ skill }}</li>
+        </ul>
+      </div>
+
+      <div
+        class="section"
+        id="contact-section"
+        [class.active]="personData?.activeSection === 'contact'"
+      >
+        <h3>Contact</h3>
+        <p><strong>Email:</strong> {{ personData?.email }}</p>
+        <p *ngIf="personData?.phone">
+          <strong>Phone:</strong> {{ personData?.phone }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
