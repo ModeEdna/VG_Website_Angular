@@ -49,13 +49,13 @@ body {
   padding: 0;
   font-family: var(--font-family);
   background-color: var(--bg-cards);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body {
   height: 100%;
-  padding-top: var(
-    --navbar-height
-  ); /* Add padding to account for fixed navbar */
 }
 
 .container {
@@ -66,4 +66,12 @@ body {
   width: 100%;
   background-color: var(--bg-light);
   flex-direction: column;
+}
+
+main,
+.content,
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

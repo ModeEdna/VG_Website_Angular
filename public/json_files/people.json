@@ -9,62 +9,68 @@
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "Michelle is a seasoned VP of Applications with over 15 years of experience in the tech industry. She is passionate about developing innovative solutions and leading high-performing teams."
     },
     {
       "id": "2",
-      "name": "John Doe",
-      "title": "Software Engineer",
-      "email": "mcienfuegos@venturegloballng.com",
+      "name": "Patrick Morales",
+      "title": "Director of BI",
+      "email": "pmorales@venturegloballng.com",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "John is a dedicated software engineer with a knack for solving complex problems. He enjoys working with modern web technologies and contributing to open-source projects."
     },
     {
       "id": "3",
-      "name": "Jane Doe",
-      "title": "Software Engineer",
-      "email": "mcienfuegos@venturegloballng.com",
+      "name": "Juan Pulas",
+      "title": "Sr. Data Engineer",
+      "email": "jpulas@venturegloballng.com",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "Jane is a talented software engineer with a strong background in full-stack development. She is passionate about building scalable applications and improving user experiences."
     },
     {
       "id": "4",
-      "name": "John Smith",
-      "title": "Software Engineer",
+      "name": "Rishitha Koneru",
+      "title": "Data Engineer",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "John is an experienced software engineer who excels in backend development. He is committed to writing clean, efficient code and enjoys mentoring junior developers."
     },
     {
       "id": "5",
-      "name": "Jane Smith",
-      "title": "Software Engineer",
+      "name": "Alexader Lubyanski",
+      "title": "Sr Data Scientist",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "Jane is a software engineer with a passion for front-end development. She loves creating intuitive user interfaces and staying up-to-date with the latest design trends."
     },
     {
       "id": "6",
-      "name": "John Johnson",
-      "title": "Software Engineer",
+      "name": "Amanda Edmonds",
+      "title": "BI Applications",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "John is a versatile software engineer with expertise in both front-end and back-end technologies. He enjoys tackling challenging projects and collaborating with cross-functional teams."
     },
     {
       "id": "7",
@@ -75,7 +81,8 @@
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "Jane is a skilled software engineer with a focus on developing robust web applications. She is dedicated to continuous learning and enjoys experimenting with new technologies."
     },
     {
       "id": "8",
@@ -86,7 +93,8 @@
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "John is a proficient software engineer with a strong foundation in computer science. He is passionate about optimizing performance and ensuring code quality."
     },
     {
       "id": "9",
@@ -97,7 +105,8 @@
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "Jane is a dedicated software engineer with a love for coding and problem-solving. She enjoys working on innovative projects and contributing to team success."
     },
     {
       "id": "10",
@@ -108,7 +117,8 @@
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "John is a software engineer with a passion for developing high-quality software solutions. He is always eager to learn new technologies and improve his skills."
     },
     {
       "id": "11",
@@ -119,7 +129,8 @@
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
       "phone": "415-555-5555",
-      "image": "../business.png"
+      "image": "../business.png",
+      "description": "Jane is a software engineer with a strong focus on user-centered design. She is passionate about creating seamless user experiences and writing clean, maintainable code."
     }
   ]
 }

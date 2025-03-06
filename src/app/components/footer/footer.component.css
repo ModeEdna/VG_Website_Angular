@@ -5,10 +5,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: var(--space-lg);
+  margin-top: auto;
   opacity: 0.2;
   transition: opacity var(--transition-standard);
-  position: relative; /* Add this for absolute positioning of child elements */
+  width: 99%; /* Add this for absolute positioning of child elements */
 }
 
 footer:hover {
