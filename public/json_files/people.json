@@ -1,0 +1,114 @@
+{
+  "people": [
+    {
+      "id": "1",
+      "name": "Michelle Cienfuegos",
+      "title": "VP of Applications",
+      "email": "mcienfuegos@venturegloballng.com",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "2",
+      "name": "John Doe",
+      "title": "Software Engineer",
+      "email": "mcienfuegos@venturegloballng.com",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "3",
+      "name": "Jane Doe",
+      "title": "Software Engineer",
+      "email": "mcienfuegos@venturegloballng.com",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "4",
+      "name": "John Smith",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "5",
+      "name": "Jane Smith",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "6",
+      "name": "John Johnson",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "7",
+      "name": "Jane Johnson",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "8",
+      "name": "John Doe",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "9",
+      "name": "Jane Doe",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "10",
+      "name": "John Smith",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    },
+    {
+      "id": "11",
+      "name": "Jane Smith",
+      "title": "Software Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555"
+    }
+  ]
+}
