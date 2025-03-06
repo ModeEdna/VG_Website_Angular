@@ -1,8 +1,5 @@
 <!-- Create profile cards for employees with a small, circular image on the left, a name and title to the right of the image, and three buttons underneath for contact, bio, and skills.
  Do it without angular for now; i want to build the skeleton firs -->
-
-<h1>Our Team</h1>
-
 <div *ngIf="loading">Loading employee data...</div>
 
 <div *ngIf="error" class="error">
@@ -13,7 +10,7 @@
   <div class="person-cards-container">
     <div class="person-card" *ngFor="let employee of employees">
       <div class="person-image">
-        <img [src]="employee.image" [alt]="employee.name" />
+        <img [src]="employee.image" />
       </div>
       <div class="person-info">
         <h3>{{ employee.name }}</h3>
