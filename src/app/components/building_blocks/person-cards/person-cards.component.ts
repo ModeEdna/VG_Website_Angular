@@ -1,22 +1,29 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-person-cards',
-  imports: [CommonModule],
+  standalone: true, // Add this
+  imports: [CommonModule], // Add CommonModule for ngFor, ngIf, etc.
   templateUrl: './person-cards.component.html',
   styleUrl: './person-cards.component.css',
 })
-export class PersonCardsComponent implements OnInit {
-  people: any[] = [];
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http.get<any[]>('/assets/json_files/people.json').subscribe((data) => {
-      this.people = data;
-    });
-  }
+export class PersonCardsComponent {
+  // Sample data
+  employees = [
+    {
+      id: 1,
+      name: 'Jane Doe',
+      title: 'Senior Developer',
+      image: 'assets/images/placeholder.jpg',
+      description: 'Full-stack developer with 10 years of experience.',
+    },
+    {
+      id: 2,
+      name: 'John Smith',
+      title: 'UX Designer',
+      image: 'assets/images/placeholder.jpg',
+      description: 'Specializes in user research and interface design.',
+    },
+  ];
 }

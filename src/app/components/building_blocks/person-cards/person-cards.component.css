@@ -1,0 +1,47 @@
+.person-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.person-card {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.person-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.person-info {
+  padding: 16px;
+}
+
+.person-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.person-info h4 {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.person-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

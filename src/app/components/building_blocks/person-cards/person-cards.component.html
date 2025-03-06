@@ -1,17 +1,15 @@
-<!-- Create profile cards for employees with a small, circular image on the left, a name and title to the right of the image, and three buttons underneath for contact, bio, and skills. 
-Do it in a for loop with the source being public/json_files/people.json. -->
+<!-- Create profile cards for employees with a small, circular image on the left, a name and title to the right of the image, and three buttons underneath for contact, bio, and skills.
+ Do it without angular for now; i want to build the skeleton firs -->
 
-<div>
-  <div *ngFor="let person of people" class="person-card">
-    <img [src]="person.image" class="person-image" />
-    <div class="person-info">
-      <h3>{{ person.name }}</h3>
-      <p>{{ person.title }}</p>
+<div class="person-cards-container">
+  <div class="person-card" *ngFor="let employee of employees">
+    <div class="person-image">
+      <img [src]="employee.image" [alt]="employee.name" />
     </div>
-    <div class="person-buttons">
-      <button class="contact-button">Contact</button>
-      <button class="bio-button">Bio</button>
-      <button class="skills-button">Skills</button>
+    <div class="person-info">
+      <h3>{{ employee.name }}</h3>
+      <h4>{{ employee.title }}</h4>
+      <p>{{ employee.description }}</p>
     </div>
   </div>
 </div>
