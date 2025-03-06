@@ -1,29 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-person-cards',
-  standalone: true, // Add this
-  imports: [CommonModule], // Add CommonModule for ngFor, ngIf, etc.
+  standalone: true,
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './person-cards.component.html',
   styleUrl: './person-cards.component.css',
 })
-export class PersonCardsComponent {
-  // Sample data
-  employees = [
-    {
-      id: 1,
-      name: 'Jane Doe',
-      title: 'Senior Developer',
-      image: 'assets/images/placeholder.jpg',
-      description: 'Full-stack developer with 10 years of experience.',
-    },
-    {
-      id: 2,
-      name: 'John Smith',
-      title: 'UX Designer',
-      image: 'assets/images/placeholder.jpg',
-      description: 'Specializes in user research and interface design.',
-    },
-  ];
+export class PersonCardsComponent implements OnInit {
+  employees: any[] = [];
+  loading: boolean = true;
+  error: string | null = null;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    this.loadEmployees();
+  }
+
+  loadEmployees(): void {
+    this.http.get<{ people: any[] }>('/json_files/people.json').subscribe({
+      next: (data) => {
+        console.log('Data received:', data);
+        this.employees = data.people || [];
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Error loading employees:', err);
+        this.error = 'Failed to load employee data';
+        this.loading = false;
+        // Fallback data
+        this.employees = [
+          { name: 'John Doe', title: 'Developer' },
+          { name: 'Jane Smith', title: 'Designer' },
+        ];
+      },
+    });
+  }
 }
