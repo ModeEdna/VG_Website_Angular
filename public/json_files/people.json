@@ -8,7 +8,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "MichelleCienfuegos.jpg"
     },
     {
       "id": "2",
@@ -18,7 +19,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JohnDoe.jpg"
     },
     {
       "id": "3",
@@ -28,7 +30,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JaneDoe.jpg"
     },
     {
       "id": "4",
@@ -38,7 +41,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JohnSmith.jpg"
     },
     {
       "id": "5",
@@ -48,7 +52,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JaneSmith.jpg"
     },
     {
       "id": "6",
@@ -58,7 +63,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JohnJohnson.jpg"
     },
     {
       "id": "7",
@@ -68,7 +74,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JaneJohnson.jpg"
     },
     {
       "id": "8",
@@ -78,7 +85,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JohnDoe.jpg"
     },
     {
       "id": "9",
@@ -88,7 +96,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JaneDoe.jpg"
     },
     {
       "id": "10",
@@ -98,7 +107,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JohnSmith.jpg"
     },
     {
       "id": "11",
@@ -108,7 +118,8 @@
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
       "location": "San Francisco, CA",
-      "phone": "415-555-5555"
+      "phone": "415-555-5555",
+      "image": "JaneSmith.jpg"
     }
   ]
 }

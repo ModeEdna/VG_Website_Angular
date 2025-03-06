@@ -1,1 +1,17 @@
+<!-- Create profile cards for employees with a small, circular image on the left, a name and title to the right of the image, and three buttons underneath for contact, bio, and skills. 
+Do it in a for loop with the source being public/json_files/people.json. -->
 
+<div>
+  <div *ngFor="let person of people" class="person-card">
+    <img [src]="person.image" class="person-image" />
+    <div class="person-info">
+      <h3>{{ person.name }}</h3>
+      <p>{{ person.title }}</p>
+    </div>
+    <div class="person-buttons">
+      <button class="contact-button">Contact</button>
+      <button class="bio-button">Bio</button>
+      <button class="skills-button">Skills</button>
+    </div>
+  </div>
+</div>
