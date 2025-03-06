@@ -9,13 +9,25 @@
 <div class="employee-cards" *ngIf="employees.length > 0">
   <div class="person-cards-container">
     <div class="person-card" *ngFor="let employee of employees">
-      <div class="person-image">
-        <img [src]="employee.image" />
+      <div class="card-header">
+        <div class="person-image">
+          <img
+            [src]="employee.image || 'assets/placeholder-profile.jpg'"
+            alt="{{ employee.name }}"
+          />
+        </div>
+        <div class="person-info">
+          <h3>{{ employee.name }}</h3>
+          <h4>{{ employee.title }}</h4>
+        </div>
       </div>
-      <div class="person-info">
-        <h3>{{ employee.name }}</h3>
-        <h4>{{ employee.title }}</h4>
+      <div class="description" *ngIf="employee.description">
         <p>{{ employee.description }}</p>
+      </div>
+      <div class="button-group">
+        <button class="btn btn-bio">Bio</button>
+        <button class="btn btn-contact">Contact</button>
+        <button class="btn btn-skills">Skills</button>
       </div>
     </div>
   </div>
