@@ -78,6 +78,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   toggleDropdown(event: Event, button: HTMLElement) {
     event.stopPropagation();
-    button.classList.toggle('active');
+
+    // Find the parent dropdown container and toggle its 'show' class
+    const parentContainer = button.closest('.dropdown-container');
+    if (parentContainer) {
+      parentContainer.classList.toggle('show');
+
+      // Also toggle the active class on the button for visual feedback
+      button.classList.toggle('active');
+    }
   }
 }
