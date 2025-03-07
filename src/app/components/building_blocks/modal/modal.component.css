@@ -53,10 +53,6 @@
   margin-bottom: 24px;
   padding: 16px;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.modal-content .section.active {
   background-color: #f5f5f5;
   border-left: 4px solid #007bff;
 }
@@ -67,8 +63,21 @@
 }
 
 .modal-content .section ul {
-  padding-left: 24px;
+  padding-left: 0;
   margin-top: 8px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-content .section ul li {
+  display: inline-block;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 4px 10px;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
 }
 
 .modal-content .person-image {

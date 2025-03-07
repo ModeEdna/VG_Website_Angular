@@ -1,37 +1,37 @@
 <div class="modal-overlay" *ngIf="isOpen" (click)="closeOnOverlayClick($event)">
   <div class="modal-container">
     <div class="modal-header">
-      <h2>{{ personData?.name }}</h2>
+      <h3>{{ personData?.name }}</h3>
       <button class="close-button" (click)="close()">×</button>
     </div>
 
     <div class="modal-content">
+      <!-- Bio Section - Only show when active -->
       <div
         class="section"
         id="bio-section"
-        [class.active]="personData?.activeSection === 'bio'"
+        *ngIf="personData?.activeSection === 'bio'"
       >
-        <h3>Biography</h3>
         <p>{{ personData?.bio }}</p>
       </div>
 
+      <!-- Skills Section - Only show when active -->
       <div
         class="section"
         id="skills-section"
-        [class.active]="personData?.activeSection === 'skills'"
+        *ngIf="personData?.activeSection === 'skills'"
       >
-        <h3>Skills</h3>
         <ul>
           <li *ngFor="let skill of personData?.skills">{{ skill }}</li>
         </ul>
       </div>
 
+      <!-- Contact Section - Only show when active -->
       <div
         class="section"
         id="contact-section"
-        [class.active]="personData?.activeSection === 'contact'"
+        *ngIf="personData?.activeSection === 'contact'"
       >
-        <h3>Contact</h3>
         <p><strong>Email:</strong> {{ personData?.email }}</p>
         <p *ngIf="personData?.phone">
           <strong>Phone:</strong> {{ personData?.phone }}
