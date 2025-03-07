@@ -11,9 +11,15 @@
     <div
       class="person-card"
       [ngClass]="{
-        'data-analyst': employee.position === 'Data Analyst',
-        'data-scientist': employee.position === 'Data Scientist',
-        'data-engineer': employee.position === 'Data Engineer',
+        'data-analyst': ['Data Analyst', 'Sr. Data Analyst'].includes(
+          employee.position
+        ),
+        'data-scientist': ['Data Scientist', 'Sr. Data Scientist'].includes(
+          employee.position
+        ),
+        'data-engineer': ['Data Engineer', 'Sr. Data Engineer'].includes(
+          employee.position
+        ),
         other: !['Data Analyst', 'Data Scientist', 'Data Engineer'].includes(
           employee.position
         )
