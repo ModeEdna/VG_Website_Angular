@@ -51,7 +51,7 @@
     {
       "id": "5",
       "name": "Alexader Lubyanski",
-      "title": "Sr Data Scientist",
+      "title": "Sr. Data Scientist",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
@@ -74,8 +74,8 @@
     },
     {
       "id": "7",
-      "name": "Jane Johnson",
-      "title": "Software Engineer",
+      "name": "Eduardo Armenta",
+      "title": "Data Analyst",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
@@ -86,8 +86,8 @@
     },
     {
       "id": "8",
-      "name": "John Doe",
-      "title": "Software Engineer",
+      "name": "Swetha Bingi",
+      "title": "Sr. BI Developer",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
@@ -98,8 +98,8 @@
     },
     {
       "id": "9",
-      "name": "Jane Doe",
-      "title": "Software Engineer",
+      "name": "Teresa Hamil",
+      "title": "Sr. Data Scientist",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
@@ -110,8 +110,8 @@
     },
     {
       "id": "10",
-      "name": "John Smith",
-      "title": "Software Engineer",
+      "name": "Jules Kenne",
+      "title": "Data Analyst",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
@@ -122,8 +122,8 @@
     },
     {
       "id": "11",
-      "name": "Jane Smith",
-      "title": "Software Engineer",
+      "name": "Luis Something",
+      "title": "Sr. BI Developer",
       "email": "",
       "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
       "availability": "7am-7pm",
