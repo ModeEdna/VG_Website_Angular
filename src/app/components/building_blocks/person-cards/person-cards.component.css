@@ -27,8 +27,8 @@
 }
 
 .person-image {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   overflow: hidden;
   flex-shrink: 0;
   /* No additional styling needed here as the img will handle the border */
