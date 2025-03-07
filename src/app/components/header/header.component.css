@@ -51,7 +51,7 @@
   z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center to align from top */
   align-items: center;
 }
 
@@ -64,6 +64,25 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  max-height: 85vh; /* Limit height to less than viewport */
+  overflow-y: auto; /* Enable scrolling for the menu content */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-top: 70px; /* Add space for the navbar/hamburger */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.mobile-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
 }
 
 .mobile-menu li {
@@ -86,6 +105,9 @@
   font-weight: 500;
   text-align: center;
   font-family: var(--font-family);
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .mobile-menu a:hover,
@@ -104,7 +126,7 @@
   background: transparent;
   border: none;
   margin: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 /* New dropdown animation styles */
@@ -118,6 +140,7 @@
   padding: 0;
   transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
   opacity: 0;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .mobile-menu .dropdown-container.show .dropdown-content {
@@ -160,7 +183,12 @@
 
 /* Show mobile menu when active */
 .mobile-overlay.active {
-  height: 100%;
+  height: 100vh; /* Use viewport height instead of percentage */
+  overflow: hidden; /* Prevent overlay from scrolling */
+  width: 100vw; /* Ensure it spans the full viewport width */
+  position: fixed; /* Keep it fixed */
+  top: 0;
+  left: 0;
 }
 
 /* Hamburger animation for active state */
