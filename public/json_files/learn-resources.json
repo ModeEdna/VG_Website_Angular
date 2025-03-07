@@ -1,0 +1,39 @@
+{
+  "learn-resources": [
+    {
+      "id": "1",
+      "name": "VG University",
+      "link": "https://www.google.com",
+      "image": "../powerBi.svg",
+      "description": "You can find your VG required courses at VG University."
+    },
+    {
+      "id": "2",
+      "name": "THE VG University",
+      "link": "https://www.google.com",
+      "image": "../portfolio.png",
+      "description": "If you go here, it is likely you'll become an NFL star."
+    },
+    {
+      "id": "3",
+      "name": "VG University of Alabama",
+      "link": "https://www.google.com",
+      "image": "../predictive.png",
+      "description": "Their coaches ignored claims against his staff, but they're good at winning."
+    },
+    {
+      "id": "4",
+      "name": "VG University Online",
+      "link": "https://www.google.com",
+      "image": "../online-shop-2.png",
+      "description": "Rising like a Phoenix, this resource helps you get a degree with flexibility."
+    },
+    {
+      "id": "5",
+      "name": "VG University High School",
+      "link": "https://www.google.com",
+      "image": "../map.jpeg",
+      "description": "The infamous feeder to VG University. Going here pretty much guarantees acceptance to VGU."
+    }
+  ]
+}
