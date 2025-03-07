@@ -17,7 +17,7 @@ interface PersonData {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
+  styleUrls: ['./modal.component.css'],
 })
 export class ModalComponent {
   @Input() personData: PersonData | null = null;
