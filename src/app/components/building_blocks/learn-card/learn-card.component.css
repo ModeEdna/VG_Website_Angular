@@ -1,0 +1,38 @@
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.learn-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px; /* Reduced from 20px */
+  justify-content: center;
+}
+
+.learn-card-container {
+  display: flex;
+  border-radius: 5%;
+  background-color: red;
+  width: 60%;
+  height: 80%;
+  padding: 5% 7%;
+}
+
+.learn-card-image {
+  height: 25%;
+  width: 25%;
+}
+
+.learn-card {
+  display: block;
+}
+
+.resource-name {
+  font-weight: 600;
+}
+
+.resource-description {
+  font-weight: 400;
+  font-size: 0.75rem;
+}

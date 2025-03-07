@@ -1,1 +1,18 @@
-<div class="learn-card"></div>
+<div class="learn-cards-container">
+  <div class="learn-card-container" *ngFor="let resource of resources">
+    <a href="{{ resource.hyperlink }}">
+      <div class="learn-card">
+        <div class="learn-card-image-container">
+          <img
+            [src]="resource.image || 'assets/world-wide-web.png'"
+            class="learn-card-image"
+          />
+        </div>
+        <div class="'learn-card-info">
+          <p class="resource-name">{{ resource.name }}</p>
+          <p class="resource-description">{{ resource.description }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 {
-  "learn-resources": [
+  "resources": [
     {
       "id": "1",
       "name": "VG University",
@@ -32,7 +32,7 @@
       "id": "5",
       "name": "VG University High School",
       "link": "https://www.google.com",
-      "image": "../map.jpeg",
+      "image": "../growth.png",
       "description": "The infamous feeder to VG University. Going here pretty much guarantees acceptance to VGU."
     }
   ]
