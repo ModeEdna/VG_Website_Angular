@@ -60,7 +60,8 @@
   margin: 0;
   font-size: 1rem; /* Slightly larger */
   color: #444; /* Darker color for better contrast */
-  font-weight: 300; /* Lighter font weight for less boldness */
+  /* reduce text boldness */
+  font-weight: 300;
 }
 
 .description {

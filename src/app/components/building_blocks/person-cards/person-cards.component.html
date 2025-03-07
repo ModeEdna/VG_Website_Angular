@@ -8,7 +8,18 @@
 
 <div class="employee-cards" *ngIf="employees.length > 0">
   <div class="person-cards-container">
-    <div class="person-card" *ngFor="let employee of employees">
+    <div
+      class="person-card"
+      [ngClass]="{
+        'data-analyst': employee.position === 'Data Analyst',
+        'data-scientist': employee.position === 'Data Scientist',
+        'data-engineer': employee.position === 'Data Engineer',
+        other: !['Data Analyst', 'Data Scientist', 'Data Engineer'].includes(
+          employee.position
+        )
+      }"
+      *ngFor="let employee of employees"
+    >
       <div class="card-header">
         <div class="person-image">
           <img
