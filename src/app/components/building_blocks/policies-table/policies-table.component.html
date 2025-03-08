@@ -2,10 +2,46 @@
   <table>
     <thead>
       <tr>
-        <th (click)="sortTable('name')">NAME</th>
-        <th (click)="sortTable('description')">DESCRIPTION</th>
-        <th (click)="sortTable('department')">DEPARTMENT</th>
-        <th (click)="sortTable('type')">TYPE</th>
+        <th
+          (click)="sortTable('name')"
+          [class.sorted-asc]="sortColumn === 'name' && sortDirection === 'asc'"
+          [class.sorted-desc]="
+            sortColumn === 'name' && sortDirection === 'desc'
+          "
+        >
+          NAME
+        </th>
+        <th
+          (click)="sortTable('description')"
+          [class.sorted-asc]="
+            sortColumn === 'description' && sortDirection === 'asc'
+          "
+          [class.sorted-desc]="
+            sortColumn === 'description' && sortDirection === 'desc'
+          "
+        >
+          DESCRIPTION
+        </th>
+        <th
+          (click)="sortTable('department')"
+          [class.sorted-asc]="
+            sortColumn === 'department' && sortDirection === 'asc'
+          "
+          [class.sorted-desc]="
+            sortColumn === 'department' && sortDirection === 'desc'
+          "
+        >
+          DEPARTMENT
+        </th>
+        <th
+          (click)="sortTable('type')"
+          [class.sorted-asc]="sortColumn === 'type' && sortDirection === 'asc'"
+          [class.sorted-desc]="
+            sortColumn === 'type' && sortDirection === 'desc'
+          "
+        >
+          TYPE
+        </th>
         <th>DOCUMENTS</th>
       </tr>
     </thead>
