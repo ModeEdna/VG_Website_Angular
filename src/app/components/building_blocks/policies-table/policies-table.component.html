@@ -1,1 +1,20 @@
-<p>policies-table works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Department</th>
+      <th>Type</th>
+      <th>Documents</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let policy of policies">
+      <td>{{ policy.name }}</td>
+      <td>{{ policy.description }}</td>
+      <td>{{ policy.department }}</td>
+      <td>{{ policy.type }}</td>
+      <td><!-- Documents column, can be filled later --></td>
+    </tr>
+  </tbody>
+</table>
