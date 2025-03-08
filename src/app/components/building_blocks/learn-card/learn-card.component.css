@@ -5,31 +5,39 @@ a {
 
 .learn-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 14px; /* Reduced from 20px */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 6px; /* Reduced from 10px to minimize white space */
   justify-content: center;
 }
 
 .learn-card-container {
   display: flex;
   border-radius: 5%;
-  background-color: red;
-  width: 60%;
-  height: 80%;
-  padding: 5% 7%;
+  background-color: #f8f8f8; /* Changed from --bg-card to match the about section cards */
+  width: 80%; /* Increased from 75% to reduce white space */ /* Set exact 16:9 aspect ratio */
+  padding: 5% 5%; /* Reduced padding to maximize usable space */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+  transition: transform 0.3s ease; /* Added transition for smooth animation */
+}
+
+.learn-card-container:hover {
+  transform: translateY(-5px); /* Raise card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .learn-card-image {
-  height: 25%;
-  width: 25%;
+  height: 18%; /* Reduced from 25% to make image smaller */
+  width: 18%; /* Reduced from 25% to make image smaller */
 }
 
 .learn-card {
   display: block;
+  width: 100%; /* Ensure card takes full width of container */
 }
 
 .resource-name {
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .resource-description {
