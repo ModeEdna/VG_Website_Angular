@@ -1,21 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PoliciesTableComponent } from '../../building_blocks/policies-table/policies-table.component';
-import { ModalComponent } from '../../building_blocks/modal/modal.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-policies-and-procedures',
-  imports: [PoliciesTableComponent, ModalComponent],
+  imports: [PoliciesTableComponent, CommonModule],
   templateUrl: './policies-and-procedures.component.html',
-  styleUrl: './policies-and-procedures.component.css',
+  styleUrls: ['./policies-and-procedures.component.css'],
 })
 export class PoliciesAndProceduresComponent {
   showModal = false;
 
-  openModal() {
+  openModal(event?: MouseEvent) {
+    if (event) {
+      event.stopPropagation();
+    }
     this.showModal = true;
   }
 
   closeModal() {
     this.showModal = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const modalContent = document.querySelector('.modal-content');
+    if (
+      this.showModal &&
+      modalContent &&
+      !modalContent.contains(event.target as Node)
+    ) {
+      this.closeModal();
+    }
   }
 }
