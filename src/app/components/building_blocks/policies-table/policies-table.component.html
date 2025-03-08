@@ -13,6 +13,7 @@
     <thead>
       <tr>
         <th
+          class="sortable"
           (click)="sortTable('name')"
           [class.sorted-asc]="sortColumn === 'name' && sortDirection === 'asc'"
           [class.sorted-desc]="
@@ -22,6 +23,7 @@
           NAME
         </th>
         <th
+          class="sortable"
           (click)="sortTable('description')"
           [class.sorted-asc]="
             sortColumn === 'description' && sortDirection === 'asc'
@@ -33,6 +35,7 @@
           DESCRIPTION
         </th>
         <th
+          class="sortable"
           (click)="sortTable('department')"
           [class.sorted-asc]="
             sortColumn === 'department' && sortDirection === 'asc'
@@ -44,6 +47,7 @@
           DEPARTMENT
         </th>
         <th
+          class="sortable"
           (click)="sortTable('type')"
           [class.sorted-asc]="sortColumn === 'type' && sortDirection === 'asc'"
           [class.sorted-desc]="
