@@ -14,6 +14,8 @@ export class PoliciesTableComponent implements OnInit {
   policies: any[] = [];
   loading = true;
   error: string | null = null;
+  sortColumn: string = '';
+  sortDirection: 'asc' | 'desc' = 'asc';
 
   constructor(private http: HttpClient) {}
 
@@ -42,6 +44,26 @@ export class PoliciesTableComponent implements OnInit {
           },
         ];
       },
+    });
+  }
+
+  sortTable(column: string): void {
+    if (this.sortColumn === column) {
+      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+      this.sortColumn = column;
+      this.sortDirection = 'asc';
+    }
+    this.policies.sort((a, b) => {
+      const valueA = a[column];
+      const valueB = b[column];
+      if (valueA < valueB) {
+        return this.sortDirection === 'asc' ? -1 : 1;
+      } else if (valueA > valueB) {
+        return this.sortDirection === 'asc' ? 1 : -1;
+      } else {
+        return 0;
+      }
     });
   }
 }
