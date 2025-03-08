@@ -1,4 +1,16 @@
-<div class="learn-cards-container">
+<!-- Loading spinner while content is loading -->
+<div class="loading-container" *ngIf="loading">
+  <div class="spinner"></div>
+  <p>Loading resources...</p>
+</div>
+
+<!-- Error message if loading fails -->
+<div class="error-message" *ngIf="error">
+  <p>{{ error }}</p>
+</div>
+
+<!-- Resources grid -->
+<div class="learn-cards-container" *ngIf="!loading && !error">
   <div class="learn-card-container" *ngFor="let resource of resources">
     <a [href]="resource.link" target="_blank" rel="noopener noreferrer">
       <div class="learn-card">
@@ -6,11 +18,15 @@
           <img
             [src]="resource.image || 'assets/world-wide-web.png'"
             class="learn-card-image"
+            [alt]="'Icon for ' + resource.name"
           />
         </div>
-        <div class="'learn-card-info">
+        <div class="learn-card-info">
           <p class="resource-name">{{ resource.name }}</p>
           <p class="resource-description">{{ resource.description }}</p>
+          <div class="resource-tags" *ngIf="resource.category">
+            <span class="tag">{{ resource.category }}</span>
+          </div>
         </div>
       </div>
     </a>

@@ -1,0 +1,81 @@
+{
+  "policies": [
+    {
+      "id": "1",
+      "name": "Policy 1",
+      "department": "Finance",
+      "description": "This is a policy that will be used for testing purposes.",
+      "type": "L1"
+    },
+    {
+      "id": "2",
+      "name": "Policy 2",
+      "department": "Human Resources",
+      "description": "This policy covers employee conduct and behavior.",
+      "type": "L2"
+    },
+    {
+      "id": "3",
+      "name": "Policy 3",
+      "department": "IT",
+      "description": "This policy outlines the acceptable use of company IT resources.",
+      "type": "L1"
+    },
+    {
+      "id": "4",
+      "name": "Policy 4",
+      "department": "Marketing",
+      "description": "This policy governs the use of social media for marketing purposes.",
+      "type": "L2"
+    },
+    {
+      "id": "5",
+      "name": "Policy 5",
+      "department": "Sales",
+      "description": "This policy sets the guidelines for sales practices and ethics.",
+      "type": "L1"
+    },
+    {
+      "id": "6",
+      "name": "Policy 6",
+      "department": "Customer Service",
+      "description": "This policy defines the standards for customer service interactions.",
+      "type": "L2"
+    },
+    {
+      "id": "7",
+      "name": "Policy 7",
+      "department": "Legal",
+      "description": "This policy outlines the procedures for legal compliance.",
+      "type": "L1"
+    },
+    {
+      "id": "8",
+      "name": "Policy 8",
+      "department": "Operations",
+      "description": "This policy details the operational procedures for the company.",
+      "type": "L2"
+    },
+    {
+      "id": "9",
+      "name": "Policy 9",
+      "department": "Finance",
+      "description": "This policy covers financial reporting and auditing standards.",
+      "type": "L1"
+    },
+    {
+      "id": "10",
+      "name": "Policy 10",
+      "department": "Research and Development",
+      "description": "This policy governs the research and development activities.",
+      "type": "L2"
+    },
+    {
+      "id": "11",
+      "name": "Policy 11",
+      "department": "Procurement",
+      "description": "This policy outlines the procurement process and vendor management.",
+      "type": "L1"
+    }
+  ]
+}
