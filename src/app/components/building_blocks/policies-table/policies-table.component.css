@@ -24,11 +24,11 @@ th {
 
 /* Add styles for sorted columns */
 th.sorted-asc::after {
-  content: " \25B2"; /* Up arrow */
+  content: " \2191"; /* Upwards arrow */
 }
 
 th.sorted-desc::after {
-  content: " \25BC"; /* Down arrow */
+  content: " \2193"; /* Downwards arrow */
 }
 
 /* Table row styling */
