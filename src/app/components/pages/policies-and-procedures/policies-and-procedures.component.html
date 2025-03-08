@@ -1,4 +1,11 @@
 <div class="policies-container">
-  <h1>Policies and Procedures</h1>
+  <div class="policies-header">
+    <h1>Policies and Procedures</h1>
+    <i class="bi bi-info-circle" (click)="openModal()"></i>
+  </div>
   <app-policies-table></app-policies-table>
+  <app-modal *ngIf="showModal" (close)="closeModal()">
+    <h2>Information</h2>
+    <p>Here is some information about policies and procedures.</p>
+  </app-modal>
 </div>

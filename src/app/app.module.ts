@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ModalComponent } from './components/building_blocks/modal/modal.component';
+import { PoliciesAndProceduresComponent } from './components/pages/policies-and-procedures/policies-and-procedures.component';
 
 @NgModule({
-  declarations: [
-    // Remove AppComponent from here since it's standalone
-  ],
   imports: [
     BrowserModule,
-    AppComponent, // Import the standalone component instead
-    HeaderComponent, // Import the standalone component instead
+    AppComponent,
+    HeaderComponent,
+    ModalComponent,
+    PoliciesAndProceduresComponent,
   ],
   providers: [],
-  bootstrap: [],
 })
 export class AppModule {}

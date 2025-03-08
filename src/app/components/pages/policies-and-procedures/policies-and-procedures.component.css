@@ -1,3 +1,12 @@
 .policies-container {
   padding: 0 3%;
 }
+
+.policies-header {
+  display: flex;
+  align-items: center;
+}
+
+.bi-info-circle {
+  margin-left: 0.5rem;
+}
