@@ -2,22 +2,21 @@
 .table-container {
   width: 100%;
   overflow-x: auto;
-  margin: 20px 0;
+  margin: 0 auto;
 }
 
 /* Table styling */
 table {
   width: 90%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 1rem 0;
   font-size: 16px;
   text-align: left;
 }
 
 /* Table header styling */
 th {
-  /* background-color: #f2f2f2; */
-  padding: 12px;
+  padding: 8px 12px; /* Decrease vertical padding */
   border-bottom: 2px solid #ddd;
   cursor: pointer;
 }
@@ -33,7 +32,7 @@ th.sorted-desc::after {
 
 /* Table row styling */
 td {
-  padding: 12px;
+  padding: 8px 12px; /* Decrease vertical padding */
   border-bottom: 1px solid #ddd;
 }
 
@@ -53,25 +52,27 @@ td img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
-  width: 90%;
+  margin: 0;
+  width: 100%;
 }
 
 .pagination-controls .left-controls {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .pagination-controls .center-controls {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-grow: 1;
+  justify-content: flex-start;
+  width: 90%;
 }
 
 .pagination-controls label {
   margin-right: 10px;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .pagination-controls select {
@@ -79,7 +80,7 @@ td img {
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #f9f9f9;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .pagination-controls button {
@@ -100,4 +101,40 @@ td img {
 
 .pagination-controls button:not(:disabled):hover {
   background-color: #0056b3;
+}
+
+.pagination-controls-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  width: 90%;
+}
+
+/* Button styling for actions column */
+.btn {
+  margin-right: 5px;
+}
+
+.btn:last-child {
+  margin-right: 0;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }

@@ -100,5 +100,21 @@ export class PoliciesTableComponent implements OnInit {
         return 0;
       }
     });
+    this.updatePagination();
+  }
+
+  downloadPolicy(policy: any): void {
+    console.log('Download policy:', policy);
+    // Add logic to download the policy
+  }
+
+  editPolicy(policy: any): void {
+    console.log('Edit policy:', policy);
+    // Add logic to edit the policy
+  }
+
+  infoPolicy(policy: any): void {
+    console.log('Info policy:', policy);
+    // Add logic to show information about the policy
   }
 }
