@@ -113,28 +113,30 @@ td img {
 
 /* Button styling for actions column */
 .btn {
-  margin-right: 5px;
+  width: 1.5rem;
+  height: 2rem; /* Taller than wide */
+  display: inline-flex; /* Horizontally stacked */
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px; /* Small gap between buttons */
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #eaeaea; /* Light gray */
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
 }
 
 .btn:last-child {
   margin-right: 0;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-
-.btn-info {
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-}
-
 .btn:hover {
-  opacity: 0.8;
+  background-color: #dc3545; /* Red on hover */
+  border-color: #dc3545;
+  color: white;
+  cursor: pointer; /* Change mouse to click icon on hover */
+}
+
+.btn i {
+  font-size: 18px;
 }
