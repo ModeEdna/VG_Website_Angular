@@ -10,3 +10,7 @@
 .bi-info-circle {
   margin-left: 0.5rem;
 }
+
+.policies-header i {
+  cursor: pointer;
+}
