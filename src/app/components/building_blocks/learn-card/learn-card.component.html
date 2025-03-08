@@ -1,6 +1,6 @@
 <div class="learn-cards-container">
   <div class="learn-card-container" *ngFor="let resource of resources">
-    <a href="{{ resource.hyperlink }}">
+    <a [href]="resource.link" target="_blank" rel="noopener noreferrer">
       <div class="learn-card">
         <div class="learn-card-image-container">
           <img
