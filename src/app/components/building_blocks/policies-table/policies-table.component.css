@@ -47,3 +47,57 @@ td img {
   width: 24px;
   height: 24px;
 }
+
+/* Pagination controls styling */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.pagination-controls .left-controls {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-controls .center-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.pagination-controls label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.pagination-controls select {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+.pagination-controls button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls button:not(:disabled):hover {
+  background-color: #0056b3;
+}

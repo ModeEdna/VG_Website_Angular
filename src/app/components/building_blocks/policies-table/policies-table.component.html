@@ -46,7 +46,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let policy of policies">
+      <tr *ngFor="let policy of paginatedPolicies">
         <td>{{ policy.name }}</td>
         <td>{{ policy.description }}</td>
         <td>{{ policy.department }}</td>
@@ -55,4 +55,22 @@
       </tr>
     </tbody>
   </table>
+  <div class="pagination-controls">
+    <div class="left-controls">
+      <label for="pageSize">Show:</label>
+      <select id="pageSize" (change)="updatePageSize($event)">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+    <div class="center-controls">
+      <button (click)="previousPage()" [disabled]="currentPage === 1">
+        Previous
+      </button>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+        Next
+      </button>
+    </div>
+  </div>
 </div>

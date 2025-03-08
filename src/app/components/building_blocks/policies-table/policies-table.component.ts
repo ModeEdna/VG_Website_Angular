@@ -16,6 +16,10 @@ export class PoliciesTableComponent implements OnInit {
   error: string | null = null;
   sortColumn: string = '';
   sortDirection: 'asc' | 'desc' = 'asc';
+  pageSize: number = 10;
+  currentPage: number = 1;
+  totalPages: number = 1;
+  paginatedPolicies: any[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -29,6 +33,7 @@ export class PoliciesTableComponent implements OnInit {
         console.log('Data received:', data);
         this.policies = data.policies || [];
         this.loading = false;
+        this.updatePagination();
       },
       error: (err) => {
         console.error('Error loading policies:', err);
@@ -43,8 +48,38 @@ export class PoliciesTableComponent implements OnInit {
             type: 'Sample Type',
           },
         ];
+        this.updatePagination();
       },
     });
+  }
+
+  updatePagination(): void {
+    this.totalPages = Math.ceil(this.policies.length / this.pageSize);
+    this.paginatedPolicies = this.policies.slice(
+      (this.currentPage - 1) * this.pageSize,
+      this.currentPage * this.pageSize
+    );
+  }
+
+  updatePageSize(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    this.pageSize = parseInt(selectElement.value, 10);
+    this.currentPage = 1;
+    this.updatePagination();
+  }
+
+  previousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.updatePagination();
+    }
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.updatePagination();
+    }
   }
 
   sortTable(column: string): void {
