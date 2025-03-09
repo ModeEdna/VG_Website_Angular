@@ -19,6 +19,7 @@
   background-color: lightcoral;
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -59,4 +60,9 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the lower container */
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
 }
