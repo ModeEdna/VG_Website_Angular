@@ -3,13 +3,14 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  height: 86vh;
 }
 
 .landing-cards-container {
   display: flex;
-  width: 100%;
-  height: 80vh; /* Set a specific height for the container */
-  gap: 1rem;
+  width: 80%;
+  height: 70vh; /* Set a specific height for the container */
+  gap: 2rem;
 }
 
 .landing-cards-container-left {
