@@ -1,0 +1,31 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 20px;
+  width: 80%;
+  height: 80%;
+}
+
+.landing-upper-left {
+  background-color: aliceblue;
+}
+
+.landing-upper-right {
+  background-color: rebeccapurple;
+}
+
+.landing-lower-left {
+  background-color: lightcoral;
+}
+
+.landing-lower-right {
+  background-color: lightgrey;
+}
