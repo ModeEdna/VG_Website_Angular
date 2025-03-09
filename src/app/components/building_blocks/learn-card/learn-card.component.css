@@ -44,3 +44,7 @@ a {
   font-weight: 400;
   font-size: 0.8rem;
 }
+
+.learn-card-image-container {
+  margin-bottom: 1rem;
+}
