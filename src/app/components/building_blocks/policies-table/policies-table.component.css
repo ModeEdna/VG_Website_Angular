@@ -271,7 +271,7 @@ td img {
 .search-container {
   display: flex;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 10px;
   position: relative;
 }
 
@@ -305,10 +305,20 @@ td img {
 .clear-search {
   position: absolute;
   right: 10px;
-  color: #999;
-  font-size: 14px;
+  color: rgb(184, 184, 184) !important;
+  font-size: 12px; /* Reduced font size */
   cursor: pointer;
-  background: none;
-  border: none;
+  background: none !important;
+  border: none !important;
   padding: 0;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none !important;
+  margin: 0 !important;
 }
+
+/* .clear-search:hover {
+  color: #007bff;
+} */

@@ -1,5 +1,14 @@
 <div class="pagination-controls">
   <div class="left-controls">
+    <label for="pageSize">Show:</label>
+    <select id="pageSize" (change)="updatePageSize($event)">
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="50">50</option>
+    </select>
+  </div>
+
+  <div class="right-controls">
     <!-- Search bar -->
     <div class="search-container">
       <i class="bi bi-search search-icon"></i>
@@ -10,20 +19,9 @@
         (input)="applySearch()"
         placeholder="Search policies..."
       />
-      <button *ngIf="searchQuery" class="clear-search" (click)="clearSearch()">
-        <i class="bi bi-x"></i>
-      </button>
+      <button class="clear-search" (click)="clearSearch()">X</button>
     </div>
 
-    <label for="pageSize">Show:</label>
-    <select id="pageSize" (change)="updatePageSize($event)">
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="50">50</option>
-    </select>
-  </div>
-
-  <div class="right-controls">
     <!-- Department filter dropdown -->
     <div class="department-filter">
       <button (click)="toggleDepartmentDropdown($event)" style="color: black">
