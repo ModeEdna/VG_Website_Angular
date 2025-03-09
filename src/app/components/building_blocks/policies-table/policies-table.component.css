@@ -102,12 +102,25 @@ td img {
 .department-filter button {
   display: flex;
   align-items: center;
-  background-color: var(--primary-color, #007bff);
-  color: white;
+  background-color: transparent;
+  color: black;
+  border: 2px solid var(--primary-color, #007bff);
+  border-radius: 6px;
+  padding: 8px 15px;
 }
 
 .department-filter button i {
   margin-left: 6px;
+  color: black;
+}
+
+/* Override hover effects for department filter button */
+.department-filter button:hover {
+  background-color: transparent !important;
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  opacity: 1 !important;
+  color: black !important;
 }
 
 .dropdown-content {
@@ -120,7 +133,7 @@ td img {
   z-index: 1;
   border-radius: 4px;
   margin-top: 2px;
-  max-height: 250px;
+  max-height: 500px;
   overflow-y: auto;
 }
 
