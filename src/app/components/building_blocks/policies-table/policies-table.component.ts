@@ -2,11 +2,12 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-policies-table',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, FormsModule],
   templateUrl: './policies-table.component.html',
   styleUrl: './policies-table.component.css',
 })
@@ -26,6 +27,9 @@ export class PoliciesTableComponent implements OnInit {
   showDepartmentDropdown: boolean = false;
   availableDepartments: string[] = [];
   selectedDepartments: string[] = [];
+
+  // Search functionality
+  searchQuery: string = '';
 
   constructor(private http: HttpClient) {}
 
@@ -118,19 +122,41 @@ export class PoliciesTableComponent implements OnInit {
 
   // Apply department filter to policies
   applyDepartmentFilter(): void {
-    if (this.selectedDepartments.length === 0) {
-      this.filteredPolicies = [];
-    } else if (
-      this.selectedDepartments.length === this.availableDepartments.length
-    ) {
-      this.filteredPolicies = [...this.policies];
-    } else {
-      this.filteredPolicies = this.policies.filter((policy) =>
-        this.selectedDepartments.includes(policy.department)
+    this.applySearch();
+  }
+
+  // Apply search filter
+  applySearch(): void {
+    // First apply department filter
+    let results =
+      this.selectedDepartments.length === 0
+        ? []
+        : this.selectedDepartments.length === this.availableDepartments.length
+        ? [...this.policies]
+        : this.policies.filter((policy) =>
+            this.selectedDepartments.includes(policy.department)
+          );
+
+    // Then apply search filter
+    if (this.searchQuery && this.searchQuery.trim() !== '') {
+      const query = this.searchQuery.toLowerCase().trim();
+      results = results.filter(
+        (policy) =>
+          (policy.name && policy.name.toLowerCase().includes(query)) ||
+          (policy.description &&
+            policy.description.toLowerCase().includes(query))
       );
     }
+
+    this.filteredPolicies = results;
     this.currentPage = 1;
     this.updatePagination();
+  }
+
+  // Clear search
+  clearSearch(): void {
+    this.searchQuery = '';
+    this.applySearch();
   }
 
   updatePagination(): void {
