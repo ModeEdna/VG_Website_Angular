@@ -4,24 +4,83 @@
   align-items: center;
   padding: 1rem;
   height: 86vh;
+  /* background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7); */
 }
 
 .landing-cards-container {
   display: flex;
-  width: 80%;
-  height: 70vh; /* Set a specific height for the container */
+  width: 70%;
+  height: 60vh; /* Set a specific height for the container */
   gap: 2rem;
 }
 
 .landing-cards-container-left {
   flex: 1; /* Take 50% of the space */
   height: 100%;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
+  align-items: left;
+  padding: 2rem;
+}
+
+.greeting {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.greeting .highlight {
+  font-weight: bold;
+}
+
+.profile {
+  display: flex;
   align-items: center;
+  margin-bottom: 3rem;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 1rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.profile-details {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.profile-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-details a:hover {
+  text-decoration: underline;
+}
+
+.your-apps {
+  width: 100%;
+}
+
+.apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .landing-cards-container-right {
@@ -60,9 +119,4 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the lower container */
-}
-
-.profile {
-  display: flex;
-  flex-direction: row;
 }
