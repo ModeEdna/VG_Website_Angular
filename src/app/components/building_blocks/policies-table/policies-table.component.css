@@ -317,8 +317,13 @@ td img {
   justify-content: center;
   box-shadow: none !important;
   margin: 0 !important;
+  position: relative !important;
+  padding: 0 !important;
+  right: 20px !important ;
+  transition: color 0.3s ease;
 }
 
-/* .clear-search:hover {
-  color: #007bff;
-} */
+.clear-search:hover {
+  transform: none !important;
+  color: var(--primary-color, #007bff) !important;
+}
