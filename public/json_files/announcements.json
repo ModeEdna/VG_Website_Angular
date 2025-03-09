@@ -4,28 +4,31 @@
       "id": "1",
       "title": "Announcement 1",
       "hyperlink": "https://www.google.com",
-      "image": "../powerBi.svg",
+      "image": "",
+      "video": "../VG_Video.mp4",
       "announcement": "This is an announcement."
     },
     {
       "id": "2",
       "title": "Announcement 2",
       "hyperlink": "https://www.google.com",
-      "image": "../juan.jpeg",
+      "image": "../VG_IPO.jpeg",
+      "video": "",
       "announcement": "This is an announcement 2."
     },
     {
       "id": "3",
       "title": "Announcement 3",
       "hyperlink": "https://www.google.com",
-      "image": "../portfolio.png",
+      "image": "",
+      "video": "../CP.mp4",
       "announcement": "This is an announcement 3."
     },
     {
       "id": "4",
       "title": "Announcement 4",
       "hyperlink": "https://www.google.com",
-      "image": "../facebook.png",
+      "image": "../map.jpeg",
       "announcement": "This is an announcement 4."
     }
   ]
