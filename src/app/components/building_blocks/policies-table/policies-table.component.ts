@@ -117,4 +117,10 @@ export class PoliciesTableComponent implements OnInit {
     console.log('Info policy:', policy);
     // Add logic to show information about the policy
   }
+
+  addNewPolicy(): void {
+    console.log('Add new policy clicked');
+    // Add logic for creating a new policy
+    // This could open a modal, navigate to a new page, etc.
+  }
 }
