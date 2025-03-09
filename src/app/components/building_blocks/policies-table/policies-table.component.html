@@ -9,6 +9,31 @@
   </div>
 
   <div class="right-controls">
+    <!-- Department filter dropdown -->
+    <div class="department-filter">
+      <button (click)="toggleDepartmentDropdown($event)">
+        Departments <i class="bi bi-chevron-down"></i>
+      </button>
+      <div class="dropdown-content" [class.show]="showDepartmentDropdown">
+        <label>
+          <input
+            type="checkbox"
+            [checked]="isAllDepartmentsSelected()"
+            (change)="toggleAllDepartments()"
+          />
+          All Departments
+        </label>
+        <label *ngFor="let dept of availableDepartments">
+          <input
+            type="checkbox"
+            [checked]="selectedDepartments.includes(dept)"
+            (change)="toggleDepartment(dept)"
+          />
+          {{ dept }}
+        </label>
+      </div>
+    </div>
+
     <button class="add-button" (click)="addNewPolicy()">
       <i class="bi bi-plus-lg"></i>
     </button>

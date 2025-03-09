@@ -93,6 +93,57 @@ td img {
   align-items: center;
 }
 
+/* Department filter dropdown styling */
+.department-filter {
+  position: relative;
+  margin-right: 10px;
+}
+
+.department-filter button {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color, #007bff);
+  color: white;
+}
+
+.department-filter button i {
+  margin-left: 6px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 180px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  margin-top: 2px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content label {
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.dropdown-content label:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content input[type="checkbox"] {
+  margin-right: 10px;
+}
+
 .pagination-controls label {
   margin-right: 10px;
   font-weight: normal;
