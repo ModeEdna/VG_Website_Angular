@@ -1,0 +1,41 @@
+/* Carousel container styles */
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make carousel fill the container but maintain aspect ratio */
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix the height of carousel inner to prevent resizing */
+.carousel-inner {
+  height: 100%;
+}
+
+/* Style carousel items to maintain consistent height */
+.carousel-item {
+  height: 100%;
+}
+
+/* Style images inside carousel to maintain aspect ratio without breaking layout */
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 0 auto; /* Center images horizontally */
+}
+
+/* Ensure carousel controls remain clickable */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10;
+}
+
+/* Make indicators visible */
+.carousel-indicators {
+  z-index: 10;
+}
