@@ -3,11 +3,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  /* padding: 20px; */
+  max-height: 440px; /* Assuming each card is 200px height + 20px gap */
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 1rem;
 }
 
 .logo-card {
-  width: 200px;
+  flex: 1 1 25%; /* Ensure four cards per row */
+  max-width: 25%; /* Ensure four cards per row */
+  box-sizing: border-box;
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -17,6 +23,12 @@
 
 .logo-card:hover {
   transform: scale(1.05);
+}
+
+.logo-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo-card-content {

@@ -1,6 +1,6 @@
 <div class="logos-container">
   <div *ngFor="let app of apps" class="logo-card">
-    <a [href]="app.hyperlink" target="_blank">
+    <a [href]="app.hyperlink" target="_blank" class="logo-card-link">
       <div class="logo-card-content">
         <img [src]="app.logo" alt="{{ app.title }} logo" class="logo-image" />
         <div class="logo-title">{{ app.title }}</div>
