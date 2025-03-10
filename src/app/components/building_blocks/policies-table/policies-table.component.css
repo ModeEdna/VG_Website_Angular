@@ -98,7 +98,7 @@ td img {
   padding: 0 8px; /* Remove vertical padding, keep horizontal */
   font-size: 12px;
   background-color: #aaaaaa;
-  color: #333;
+  color: #000 !important; /* Make text black */
   border: 1px solid #999;
   height: 24px; /* Fixed height */
   line-height: 24px; /* Match the height to center text */
@@ -106,6 +106,7 @@ td img {
   display: flex; /* Use flexbox for better vertical alignment */
   align-items: center; /* Vertically center content */
   justify-content: center; /* Horizontally center content */
+  transition: none !important; /* Disable all transitions */
 }
 
 /* Add margin to the Previous button specifically */
@@ -116,6 +117,35 @@ td img {
 /* Reduce margin between Previous and Next buttons */
 .left-controls button:last-of-type {
   margin-left: 1px; /* Bring Next button even closer to Previous */
+}
+
+/* Override ALL hover/focus effects on the pagination buttons */
+.left-controls button:hover,
+.left-controls button:active,
+.left-controls button:focus,
+.left-controls button:focus-visible,
+.left-controls button:focus-within {
+  background-color: #aaaaaa !important; /* Keep same background */
+  transform: none !important;
+  box-shadow: none !important;
+  color: #000 !important; /* Keep text black on hover */
+  border: 1px solid #999 !important;
+  outline: none !important; /* Remove any outline on focus */
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Remove hover effects for disabled buttons too */
+.left-controls button:disabled,
+.left-controls button:disabled:hover,
+.left-controls button:disabled:active,
+.left-controls button:disabled:focus {
+  background-color: #ccc !important;
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 0.7 !important;
+  color: #000 !important; /* Keep text black even when disabled */
+  cursor: not-allowed !important;
 }
 
 /* Completely remove hover effects */

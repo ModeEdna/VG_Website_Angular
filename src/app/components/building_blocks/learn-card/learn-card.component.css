@@ -8,6 +8,7 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem 0px; /* Reduced from 10px to minimize white space */
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .learn-card-container {
