@@ -1,0 +1,58 @@
+{
+  "apps": [
+    {
+      "id": "1",
+      "title": "PowerBI",
+      "hyperlink": "https://app.powerbi.com/singleSignOn?ru=https%3A%2F%2Fapp.powerbi.com%2F%3FnoSignUpCheck%3D1",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "2",
+      "title": "Sharepoint",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "3",
+      "title": "Outlook",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "4",
+      "title": "Looker",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "5",
+      "title": "Tableau",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "6",
+      "title": "Salesforce",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "7",
+      "title": "Google Analytics",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "8",
+      "title": "Google Ads",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    },
+    {
+      "id": "9",
+      "title": "Google Search Console",
+      "hyperlink": "https://www.google.com",
+      "logo": "/powerbi.png"
+    }
+  ]
+}

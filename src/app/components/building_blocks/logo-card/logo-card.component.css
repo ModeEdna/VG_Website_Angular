@@ -1,0 +1,35 @@
+.logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.logo-card {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.logo-card:hover {
+  transform: scale(1.05);
+}
+
+.logo-card-content {
+  padding: 10px;
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+}
+
+.logo-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
