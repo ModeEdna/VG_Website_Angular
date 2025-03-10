@@ -1,1 +1,31 @@
-<p>admin-card works!</p>
+<!-- Loading spinner while content is loading -->
+<div class="loading-container" *ngIf="loading">
+  <div class="spinner"></div>
+  <p>Loading admin cards...</p>
+</div>
+
+<!-- Error message if loading fails -->
+<div class="error-message" *ngIf="error">
+  <p>{{ error }}</p>
+</div>
+
+<!-- Resources grid -->
+<div class="learn-cards-container" *ngIf="!loading && !error">
+  <div class="learn-card-container" *ngFor="let adminCard of adminCards">
+    <a [href]="adminCard.hyperlink" target="_blank" rel="noopener noreferrer">
+      <div class="learn-card">
+        <div class="learn-card-image-container">
+          <img
+            [src]="adminCard.icon || 'assets/world-wide-web.png'"
+            class="learn-card-image"
+            [alt]="'Icon for ' + adminCard.title"
+          />
+        </div>
+        <div class="learn-card-info">
+          <p class="resource-name">{{ adminCard.title }}</p>
+          <p class="resource-description">{{ adminCard.description }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

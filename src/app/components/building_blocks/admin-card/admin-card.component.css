@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.learn-cards-container {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  padding-top: 2rem;
+  max-height: 50%;
+  overflow-x: scroll;
+}
+
+.learn-card-container {
+  display: flex;
+  border-radius: 5%;
+  background-color: #f8f8f8; /* Changed from --bg-card to match the about section cards */
+  padding: 0.5rem;
+  height: 80%;
+  /* width: 200px; */
+}
+
+.learn-card-container:hover {
+  /* transform: translateY(-5px); */
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transition: all 0.3s ease;
+}
+
+.learn-card-image {
+  height: 18%; /* Reduced from 25% to make image smaller */
+  width: 18%; /* Reduced from 25% to make image smaller */
+}
+
+.learn-card {
+  display: block;
+  width: 100%; /* Ensure card takes full width of container */
+}
+
+.resource-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.resource-description {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.learn-card-image-container {
+  margin-bottom: 1rem;
+}
