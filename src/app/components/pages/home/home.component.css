@@ -121,7 +121,6 @@
 .landing-lower-right {
   flex: 1; /* Take 50% of the height */
   width: 100%;
-  background-color: lightgrey;
   border-radius: 8px;
   display: flex;
   justify-content: flex-start; /* Align items from the start for better scrolling */
@@ -130,7 +129,6 @@
   overflow-x: auto; /* Handle horizontal overflow */
   overflow-y: hidden; /* Prevent vertical overflow */
   white-space: nowrap; /* Keep content in a single line */
-  padding: 1rem; /* Add some padding for better appearance */
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: #888 #f1f1f1; /* For Firefox */
 }
@@ -159,7 +157,37 @@
   display: flex;
   gap: 1rem;
   flex-shrink: 0; /* Prevent cards from shrinking */
-  /* Remove flex-grow if it's causing expansion */
   flex-grow: 0;
   width: max-content; /* Let it be as wide as needed for scrolling */
+  overflow: visible; /* Prevent the container from scrolling */
+}
+
+/* Add styles for admin policy cards to prevent scrolling */
+.admin-policy-card {
+  overflow: hidden; /* Prevent scrolling on individual cards */
+  height: auto; /* Let the card height adjust to content */
+  max-height: 100%; /* Limit height to container height */
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  /* Additional card styles if needed */
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: normal; /* Allow text wrapping inside cards */
+  width: 200px; /* Set a fixed width for cards */
+}
+
+/* Increase height if needed for admin policy cards */
+.admin-policy-card {
+  height: 180px; /* Set your desired height here */
+}
+
+/* Target any scrollable elements inside the cards and disable scrolling */
+.admin-policy-card *[style*="overflow: auto"],
+.admin-policy-card *[style*="overflow:auto"],
+.admin-policy-card *[style*="overflow-y: auto"],
+.admin-policy-card *[style*="overflow-y:auto"],
+.admin-policy-card *[style*="overflow-x: auto"],
+.admin-policy-card *[style*="overflow-x:auto"] {
+  overflow: hidden !important;
 }

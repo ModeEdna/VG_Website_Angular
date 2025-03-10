@@ -2,7 +2,6 @@
 .admin-cards-container {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto; /* Enable horizontal scrolling */
   padding: 1rem;
   gap: 1rem;
   width: 100%;
@@ -15,8 +14,8 @@
 }
 
 .admin-card {
-  width: 200px; /* Fixed width for admin cards */
-  height: 150px;
+  width: 12rem; /* Fixed width for admin cards */
+  height: 12rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 1rem;
@@ -28,7 +27,7 @@
 }
 
 .admin-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.01);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -61,7 +60,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
