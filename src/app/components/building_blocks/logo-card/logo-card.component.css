@@ -1,21 +1,20 @@
 .logos-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  /* padding: 20px; */
-  max-height: 440px; /* Assuming each card is 200px height + 20px gap */
-  overflow-x: auto;
-  overflow-y: hidden;
+  justify-content: left;
+  gap: 0px;
+  max-height: 440px; /* Adjust as needed */
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-top: 1rem;
 }
 
 .logo-card {
-  flex: 1 1 25%; /* Ensure four cards per row */
-  max-width: 25%; /* Ensure four cards per row */
+  flex: 1 1 22%; /* Ensure four cards per row with some gap */
+  max-width: 22%; /* Ensure four cards per row with some gap */
   box-sizing: border-box;
   text-align: center;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s;
@@ -42,6 +41,10 @@
 
 .logo-title {
   margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px; /* Decreased text size */
+  font-weight: 300;
+  max-height: 40px; /* Adjust as needed */
+  overflow-y: auto;
+  white-space: nowrap;
+  text-overflow: clip;
 }
