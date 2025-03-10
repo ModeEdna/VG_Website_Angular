@@ -10,49 +10,49 @@
       "id": "2",
       "title": "Sharepoint",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/sharepoint.png"
     },
     {
       "id": "3",
       "title": "Outlook",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/outlook.png"
     },
     {
       "id": "4",
-      "title": "Looker",
+      "title": "Stream",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/stream.png"
     },
     {
       "id": "5",
-      "title": "Tableau",
+      "title": "MS 365",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/m365.svg"
     },
     {
       "id": "6",
-      "title": "Salesforce",
+      "title": "Teams",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/teams.png"
     },
     {
       "id": "7",
-      "title": "Google Analytics",
+      "title": "Viva",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/viva.svg"
     },
     {
       "id": "8",
-      "title": "Google Ads",
+      "title": "One Note",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/onenote.png"
     },
     {
       "id": "9",
-      "title": "Google Search Console",
+      "title": "Edge",
       "hyperlink": "https://www.google.com",
-      "logo": "/powerbi.png"
+      "logo": "/edge.png"
     }
   ]
 }

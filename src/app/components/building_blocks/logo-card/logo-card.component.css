@@ -15,6 +15,7 @@
   max-width: 22%; /* Ensure four cards per row with some gap */
   box-sizing: border-box;
   text-align: center;
+  /* background-color: antiquewhite; */
   /* border: 1px solid #ddd; */
   border-radius: 8px;
   overflow: hidden;
@@ -36,8 +37,8 @@
 }
 
 .logo-image {
-  width: 90%;
-  height: auto;
+  width: auto;
+  max-height: 50px;
 }
 
 .logo-title {
