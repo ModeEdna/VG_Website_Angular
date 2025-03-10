@@ -10,20 +10,20 @@
 </div>
 
 <!-- Resources grid -->
-<div class="learn-cards-container" *ngIf="!loading && !error">
-  <div class="learn-card-container" *ngFor="let adminCard of adminCards">
+<div class="admin-cards-container" *ngIf="!loading && !error">
+  <div class="admin-card-container" *ngFor="let adminCard of adminCards">
     <a [href]="adminCard.hyperlink" target="_blank" rel="noopener noreferrer">
-      <div class="learn-card">
-        <div class="learn-card-image-container">
+      <div class="admin-card">
+        <div class="admin-card-image-container">
           <img
             [src]="adminCard.icon || 'assets/world-wide-web.png'"
-            class="learn-card-image"
+            class="admin-card-image"
             [alt]="'Icon for ' + adminCard.title"
           />
         </div>
-        <div class="learn-card-info">
-          <p class="resource-name">{{ adminCard.title }}</p>
-          <p class="resource-description">{{ adminCard.description }}</p>
+        <div class="admin-card-info">
+          <p class="admin-title">{{ adminCard.title }}</p>
+          <p class="admin-description">{{ adminCard.description }}</p>
         </div>
       </div>
     </a>

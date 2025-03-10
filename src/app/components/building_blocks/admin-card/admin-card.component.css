@@ -1,53 +1,105 @@
+/* Ensure the admin cards container handles overflow properly */
+.admin-cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  scrollbar-width: thin;
+}
+
+.admin-card-container {
+  flex: 0 0 auto; /* Don't grow, don't shrink, use auto basis */
+}
+
+.admin-card {
+  width: 200px; /* Fixed width for admin cards */
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.admin-card-image-container {
+  margin-bottom: 0.5rem;
+}
+
+.admin-card-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.admin-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.admin-description {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: inherit;
 }
 
-.learn-cards-container {
+/* Loading spinner styles */
+.loading-container {
   display: flex;
-  justify-content: left;
-  align-items: top;
-  padding-top: 2rem;
-  max-height: 50%;
-  overflow-x: scroll;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.learn-card-container {
-  display: flex;
-  border-radius: 5%;
-  background-color: #f8f8f8; /* Changed from --bg-card to match the about section cards */
-  padding: 0.5rem;
-  height: 80%;
-  /* width: 200px; */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #007bff;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
 }
 
-.learn-card-container:hover {
-  /* transform: translateY(-5px); */
-  transform: scale(1.01);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-  transition: all 0.3s ease;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.learn-card-image {
-  height: 18%; /* Reduced from 25% to make image smaller */
-  width: 18%; /* Reduced from 25% to make image smaller */
-}
-
-.learn-card {
-  display: block;
-  width: 100%; /* Ensure card takes full width of container */
-}
-
-.resource-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.resource-description {
-  font-weight: 400;
-  font-size: 0.8rem;
-}
-
-.learn-card-image-container {
-  margin-bottom: 1rem;
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  width: 100%;
 }

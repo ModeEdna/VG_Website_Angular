@@ -15,7 +15,10 @@
 }
 
 .landing-cards-container-left {
-  flex: 1; /* Take 50% of the space */
+  flex: 1 0 0; /* flex-grow: 1, flex-shrink: 0, flex-basis: 0 */
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
   height: 100%;
   /* background-color: lightcoral; */
   border-radius: 8px;
@@ -24,6 +27,7 @@
   justify-content: top;
   align-items: left;
   padding: 2rem;
+  overflow: auto; /* Handle overflow if needed */
 }
 
 .greeting {
@@ -85,7 +89,10 @@
 }
 
 .landing-cards-container-right {
-  flex: 1; /* Take 50% of the space */
+  flex: 1 0 0; /* flex-grow: 1, flex-shrink: 0, flex-basis: 0 */
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -117,8 +124,42 @@
   background-color: lightgrey;
   border-radius: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align items from the start for better scrolling */
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the lower container */
-  overflow-y: scroll;
+  overflow-x: auto; /* Handle horizontal overflow */
+  overflow-y: hidden; /* Prevent vertical overflow */
+  white-space: nowrap; /* Keep content in a single line */
+  padding: 1rem; /* Add some padding for better appearance */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #888 #f1f1f1; /* For Firefox */
+}
+
+/* Add custom scrollbar styling for WebKit browsers */
+.landing-lower-right::-webkit-scrollbar {
+  height: 8px;
+}
+
+.landing-lower-right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.landing-lower-right::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.landing-lower-right::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add this class for the content inside landing-lower-right if needed */
+.admin-policy-container {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  /* Remove flex-grow if it's causing expansion */
+  flex-grow: 0;
+  width: max-content; /* Let it be as wide as needed for scrolling */
 }
