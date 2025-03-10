@@ -7,6 +7,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   margin-top: 1rem;
+  height: 70%;
 }
 
 .logo-card {
@@ -31,20 +32,20 @@
 }
 
 .logo-card-content {
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 .logo-image {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
 .logo-title {
   margin-top: 10px;
-  font-size: 14px; /* Decreased text size */
-  font-weight: 300;
+  font-size: 0.75rem; /* Decreased text size */
+  font-weight: 500;
   max-height: 40px; /* Adjust as needed */
-  overflow-y: auto;
-  white-space: nowrap;
-  text-overflow: clip;
+  overflow-y: hidden;
+  white-space: normal; /* Allow text to wrap to the next line */
+  /* text-overflow: ellipsis; */
 }
