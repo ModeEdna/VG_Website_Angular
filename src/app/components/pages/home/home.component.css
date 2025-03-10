@@ -109,7 +109,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Prevent content from overflowing */
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Add shadow to the carousel container */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Ensure carousel takes up entire container space */
@@ -125,7 +125,7 @@
   display: flex;
   justify-content: flex-start; /* Align items from the start for better scrolling */
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the lower container */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
   overflow-x: auto; /* Handle horizontal overflow */
   overflow-y: hidden; /* Prevent vertical overflow */
   white-space: nowrap; /* Keep content in a single line */

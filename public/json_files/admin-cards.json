@@ -25,7 +25,7 @@
       "id": "4",
       "title": "Additional Admin Resource",
       "icon": "/cooperation.png",
-      "description": "Testing to see overflow",
+      "description": "Testing to see overflow in x and y direction. Adding more text to see what happens.",
       "hyperlink": "https://www.google.com"
     }
   ]
