@@ -327,3 +327,11 @@ td img {
   transform: none !important;
   color: var(--primary-color, #007bff) !important;
 }
+
+.btn-secondary {
+  color: black;
+}
+
+.btn-primary {
+  color: black;
+}
