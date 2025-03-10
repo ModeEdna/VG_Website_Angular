@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   justify-content: left;
   gap: 0px;
-  max-height: 440px; /* Adjust as needed */
+  /* max-height: 440px; */
   overflow-x: hidden;
   overflow-y: auto;
   margin-top: 1rem;
-  height: 70%;
+  /* height: 70%; */
 }
 
 .logo-card {
@@ -54,5 +54,9 @@
 @media (max-width: 950px) {
   .logo-title {
     display: none;
+  }
+
+  .logo-image {
+    max-height: 30px;
   }
 }

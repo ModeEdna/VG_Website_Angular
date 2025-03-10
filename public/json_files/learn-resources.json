@@ -34,6 +34,76 @@
       "link": "https://www.google.com",
       "image": "../growth.png",
       "description": "The infamous feeder to VG University. Going here pretty much guarantees acceptance to VGU."
+    },
+    {
+      "id": "6",
+      "name": "VG University",
+      "link": "https://www.google.com",
+      "image": "../powerBi.svg",
+      "description": "You can find your VG required courses at VG University."
+    },
+    {
+      "id": "7",
+      "name": "THE VG University",
+      "link": "https://www.google.com",
+      "image": "../portfolio.png",
+      "description": "If you go here, it is likely you'll become an NFL star."
+    },
+    {
+      "id": "8",
+      "name": "VG University of Alabama",
+      "link": "https://www.google.com",
+      "image": "../predictive.png",
+      "description": "Their coaches ignored claims against his staff, but they're good at winning."
+    },
+    {
+      "id": "9",
+      "name": "VG University Online",
+      "link": "https://www.google.com",
+      "image": "../online-shop-2.png",
+      "description": "Rising like a Phoenix, this resource helps you get a degree with flexibility."
+    },
+    {
+      "id": "10",
+      "name": "VG University High School",
+      "link": "https://www.google.com",
+      "image": "../growth.png",
+      "description": "The infamous feeder to VG University. Going here pretty much guarantees acceptance to VGU."
+    },
+    {
+      "id": "11",
+      "name": "VG Technical Institute",
+      "link": "https://www.google.com",
+      "image": "../powerBi.svg",
+      "description": "A hands-on approach to learning technical skills for the VG industry."
+    },
+    {
+      "id": "12",
+      "name": "VG Community College",
+      "link": "https://www.google.com",
+      "image": "../portfolio.png",
+      "description": "Affordable education with flexible schedules for working professionals."
+    },
+    {
+      "id": "13",
+      "name": "VG Leadership Academy",
+      "link": "https://www.google.com",
+      "image": "../predictive.png",
+      "description": "Specialized training for future leaders in the VG ecosystem."
+    },
+    {
+      "id": "14",
+      "name": "VG Certification Program",
+      "link": "https://www.google.com",
+      "image": "../online-shop-2.png",
+      "description": "Industry-recognized certifications to boost your resume and credibility."
+    },
+    {
+      "id": "15",
+      "name": "VG Research Center",
+      "link": "https://www.google.com",
+      "image": "../growth.png",
+      "description": "Cutting-edge research opportunities and publications in VG-related fields."
     }
   ]
 }

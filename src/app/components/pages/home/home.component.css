@@ -10,7 +10,7 @@
 .landing-cards-container {
   display: flex;
   width: 70%;
-  height: 60vh; /* Set a specific height for the container */
+  height: 70vh; /* Set a specific height for the container */
   gap: 2rem;
 }
 
@@ -27,7 +27,7 @@
   justify-content: top;
   align-items: left;
   padding: 2rem;
-  overflow: auto; /* Handle overflow if needed */
+  overflow: hidden; /* Handle overflow if needed */
 }
 
 .greeting {
