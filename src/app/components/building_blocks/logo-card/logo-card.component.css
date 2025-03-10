@@ -49,3 +49,9 @@
   white-space: normal; /* Allow text to wrap to the next line */
   /* text-overflow: ellipsis; */
 }
+
+@media (max-width: 950px) {
+  .logo-title {
+    display: none;
+  }
+}
