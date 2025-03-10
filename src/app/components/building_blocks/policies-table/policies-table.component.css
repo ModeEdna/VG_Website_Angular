@@ -93,6 +93,54 @@ td img {
   align-items: center;
 }
 
+/* Specific styling for pagination buttons in left-controls */
+.left-controls button {
+  padding: 0 8px; /* Remove vertical padding, keep horizontal */
+  font-size: 12px;
+  background-color: #aaaaaa;
+  color: #333;
+  border: 1px solid #999;
+  height: 24px; /* Fixed height */
+  line-height: 24px; /* Match the height to center text */
+  margin-right: 0;
+  display: flex; /* Use flexbox for better vertical alignment */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+/* Add margin to the Previous button specifically */
+.left-controls button:first-of-type {
+  margin-left: 20px; /* Keep space between dropdown and Previous button */
+}
+
+/* Reduce margin between Previous and Next buttons */
+.left-controls button:last-of-type {
+  margin-left: 1px; /* Bring Next button even closer to Previous */
+}
+
+/* Completely remove hover effects */
+.left-controls button:hover,
+.left-controls button:active,
+.left-controls button:focus {
+  background-color: #aaaaaa !important; /* Same as non-hover state */
+  transform: none !important;
+  box-shadow: none !important;
+  color: #333 !important;
+  border: 1px solid #999 !important;
+}
+
+/* Remove hover effects for disabled buttons too */
+.left-controls button:disabled,
+.left-controls button:disabled:hover,
+.left-controls button:disabled:active,
+.left-controls button:disabled:focus {
+  background-color: #ccc !important;
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 0.7;
+  color: #666 !important;
+}
+
 /* Department filter dropdown styling */
 .department-filter {
   position: relative;
