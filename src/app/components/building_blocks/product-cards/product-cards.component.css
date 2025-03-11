@@ -13,6 +13,11 @@
   max-width: 400px;
   position: relative; /* Make product-card the anchor point */
   min-height: 100%;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.01);
 }
 
 .product-card a {
