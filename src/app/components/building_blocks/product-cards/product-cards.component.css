@@ -1,0 +1,78 @@
+.product-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  position: relative; /* Make product-card the anchor point */
+  min-height: 100%;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: inherit;
+  position: absolute; /* Position absolutely relative to product-card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* make the a tag a flex box */
+  flex-direction: column; /* stack the elements inside the a tag */
+}
+
+.product-card a div {
+  height: 100%;
+}
+
+.product-title {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.depts-facilities-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.departments,
+.facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.departments span,
+.facilities span {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.product-description {
+  font-size: 0.95em;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.product-cards-container a {
+  text-decoration: none;
+  color: black;
+}

@@ -4,7 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-product-cards',
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './product-cards.component.html',
   styleUrl: './product-cards.component.css',
 })
@@ -22,7 +22,7 @@ export class ProductCardsComponent implements OnInit {
   loadProducts(): void {
     this.http.get<{ products: any[] }>('/json_files/products.json').subscribe({
       next: (data) => {
-        console.log('Data recieved:', data);
+        console.log('Data received:', data);
         this.products = data.products || [];
         this.loading = false;
       },
