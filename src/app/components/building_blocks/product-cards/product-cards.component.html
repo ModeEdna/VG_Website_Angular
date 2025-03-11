@@ -1,8 +1,79 @@
 <div class="product-page-container">
+  <div class="header-section">
+    <h1 class="page-title">Analytic Products</h1>
+
+    <div class="controls-section">
+      <!-- Search bar -->
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search products..."
+          [(ngModel)]="searchQuery"
+          (input)="applyFilters()"
+        />
+        <i class="search-icon bi bi-search"></i>
+        <button
+          class="clear-search"
+          *ngIf="searchQuery"
+          (click)="clearSearch()"
+        >
+          ×
+        </button>
+      </div>
+
+      <!-- Department filter -->
+      <div class="department-filter">
+        <button (click)="toggleDepartmentDropdown($event)">
+          {{ selectedDepartment || "All Departments" }}
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="dropdown-content" [class.show]="showDepartmentDropdown">
+          <div class="dropdown-item" (click)="selectDepartment(null)">
+            All Departments
+          </div>
+          <div
+            class="dropdown-item"
+            *ngFor="let dept of availableDepartments"
+            (click)="selectDepartment(dept)"
+          >
+            {{ dept }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorites button with counter -->
+      <div class="favorites-container">
+        <button class="favorites-button" (click)="toggleFavoritesFilter()">
+          <i
+            class="bi"
+            [ngClass]="{
+              'bi-heart': !showOnlyFavorites,
+              'bi-heart-fill': showOnlyFavorites
+            }"
+          ></i>
+          Favorites
+          <span class="favorites-count" *ngIf="favoritesCount > 0">{{
+            favoritesCount
+          }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="product-cards-container">
-    <div *ngFor="let product of products">
+    <div *ngFor="let product of filteredProducts">
       <a [href]="product.hyperlink" target="_blank">
         <div class="product-card">
+          <div class="favorite-icon" (click)="toggleFavorite($event, product)">
+            <i
+              class="bi"
+              [ngClass]="{
+                'bi-heart': !isFavorite(product),
+                'bi-heart-fill': isFavorite(product)
+              }"
+            ></i>
+          </div>
           <h2 class="product-title">{{ product.title }}</h2>
           <p class="date">{{ product.date }}</p>
           <div class="depts-facilities-container">
