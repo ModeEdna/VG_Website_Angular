@@ -1,1 +1,13 @@
-<p>product-cards works!</p>
+<div class="product-cards-container" *ng="let product of products">
+  <a href="'https://www.google.com">
+    <div class="product-card">
+      <h2 class="product-title">{{ product.title }}</h2>
+      <p class="date">{{ product.date }}</p>
+      <div class="depts-facilities-container">
+        <div class="departments"></div>
+        <div class="'facilities"></div>
+      </div>
+      <p class="product-description"></p>
+    </div>
+  </a>
+</div>

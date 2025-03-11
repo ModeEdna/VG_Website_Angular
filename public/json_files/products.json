@@ -2,30 +2,38 @@
   "products": [
     {
       "id": "1",
-      "title": "Products",
-      "icon": "/online-shop.png",
-      "description": "Add or edit products",
+      "title": "Finance Product",
+      "departments": ["Finance", "Accounting"],
+      "facilities": ["PQ", "CP"],
+      "description": "Sample description for a product. Making it longer so we see what it loks like when the text extends past a certain point of no return, as foretold by the people who came before us.",
+      "date": "10/23/23",
       "hyperlink": "https://www.google.com"
     },
     {
       "id": "2",
-      "title": "Facilities, Departments, and Security Groups",
-      "icon": "/world-wide-web.png",
-      "description": "Add, edit, remove facilities, departments, or security groups.",
+      "title": "Police Policy",
+      "departments": ["Finance", "HR", "IT"],
+      "facilities": ["CP", "CP2"],
+      "description": "Sample description for a product.",
+      "date": "07/21/24",
       "hyperlink": "https://www.google.com"
     },
     {
       "id": "3",
-      "title": "Policies and Procedures",
-      "icon": "/portfolio.png",
-      "description": "Add and manage policies and procedures",
+      "title": "Pawlice Pawlicy (Meow)",
+      "departments": ["Cats", "Dogs", "Platypus"],
+      "facilities": ["PQ"],
+      "description": "Why can't animals have policies as well? They deserve policies. What if a beaver wants to build a dam but can't because of a lack of policies? It is for this reason that we must encourage better treatment for animals. Cause frankly, if we don't give a dam, who will?",
+      "date": "12/25/24",
       "hyperlink": "https://www.google.com"
     },
     {
       "id": "4",
-      "title": "Additional Admin Resource",
-      "icon": "/cooperation.png",
-      "description": "Testing to see overflow in x and y direction. Adding more text to see what happens.",
+      "title": "Serious Policy",
+      "departments": ["C Suite", "VPs", "Directors"],
+      "facilities": ["CP"],
+      "description": "Sample description for a product. Making it longer so we see what it loks like when the text extends past a certain point of no return, as foretold by the people who came before us.",
+      "date": "10/23/23",
       "hyperlink": "https://www.google.com"
     }
   ]
