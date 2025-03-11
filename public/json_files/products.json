@@ -14,7 +14,7 @@
       "title": "Police Policy",
       "departments": ["Finance", "HR", "IT"],
       "facilities": ["CP", "CP2"],
-      "description": "Sample description for a product.",
+      "description": "Sample description for a product. Need to add text to see behaviour past a certain length.",
       "date": "07/21/24",
       "hyperlink": "https://www.google.com"
     },
