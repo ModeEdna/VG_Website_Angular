@@ -1,18 +1,41 @@
 <div class="product-page-container">
   <div class="controls-section">
-    <!-- Search bar on the left -->
-    <div class="search-container">
-      <input
-        type="text"
-        class="search-input"
-        placeholder="Search products..."
-        [(ngModel)]="searchQuery"
-        (input)="applyFilters()"
-      />
-      <i class="search-icon bi bi-search"></i>
-      <button class="clear-search" *ngIf="searchQuery" (click)="clearSearch()">
-        ×
-      </button>
+    <!-- Left section with search bar and pagination -->
+    <div class="left-section">
+      <!-- Search bar -->
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search products..."
+          [(ngModel)]="searchQuery"
+          (input)="applyFilters()"
+        />
+        <i class="search-icon bi bi-search"></i>
+        <button
+          class="clear-search"
+          *ngIf="searchQuery"
+          (click)="clearSearch()"
+        >
+          ×
+        </button>
+      </div>
+
+      <!-- Pagination controls - moved here -->
+      <div class="pagination-controls">
+        <label for="pageSize">Show:</label>
+        <select id="pageSize" (change)="updatePageSize($event)">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+        <button (click)="previousPage()" [disabled]="currentPage === 1">
+          Previous
+        </button>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+          Next
+        </button>
+      </div>
     </div>
 
     <div class="right-controls">
@@ -61,7 +84,7 @@
   </div>
 
   <div class="product-cards-container">
-    <div *ngFor="let product of filteredProducts">
+    <div *ngFor="let product of paginatedProducts">
       <a [href]="product.hyperlink" target="_blank">
         <div class="product-card">
           <div class="favorite-icon" (click)="toggleFavorite($event, product)">

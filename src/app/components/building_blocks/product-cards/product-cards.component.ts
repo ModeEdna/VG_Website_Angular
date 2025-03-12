@@ -15,6 +15,12 @@ export class ProductCardsComponent implements OnInit {
   loading: boolean = true;
   error: string | null = null;
 
+  // Pagination properties
+  pageSize: number = 10;
+  currentPage: number = 1;
+  totalPages: number = 1;
+  paginatedProducts: any[] = [];
+
   // Search functionality
   searchQuery: string = '';
 
@@ -42,6 +48,7 @@ export class ProductCardsComponent implements OnInit {
         this.products = data.products || [];
         this.filteredProducts = [...this.products];
         this.extractAvailableDepartments();
+        this.updatePagination();
         this.loading = false;
       },
       error: (err) => {
@@ -62,6 +69,7 @@ export class ProductCardsComponent implements OnInit {
         ];
         this.filteredProducts = [...this.products];
         this.extractAvailableDepartments();
+        this.updatePagination();
       },
     });
   }
@@ -101,6 +109,51 @@ export class ProductCardsComponent implements OnInit {
     }
 
     this.filteredProducts = results;
+    // Reset to first page when filters change
+    this.currentPage = 1;
+    this.updatePagination();
+  }
+
+  // Pagination functions
+  updatePagination(): void {
+    this.totalPages = Math.ceil(this.filteredProducts.length / this.pageSize);
+
+    // Make sure totalPages is at least 1
+    if (this.totalPages === 0) {
+      this.totalPages = 1;
+    }
+
+    // Make sure currentPage doesn't exceed totalPages
+    if (this.currentPage > this.totalPages) {
+      this.currentPage = this.totalPages;
+    }
+
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    this.paginatedProducts = this.filteredProducts.slice(
+      startIndex,
+      startIndex + this.pageSize
+    );
+  }
+
+  updatePageSize(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    this.pageSize = parseInt(selectElement.value, 10);
+    this.currentPage = 1; // Reset to first page when changing page size
+    this.updatePagination();
+  }
+
+  previousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.updatePagination();
+    }
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.updatePagination();
+    }
   }
 
   clearSearch(): void {
