@@ -14,6 +14,7 @@
   position: relative; /* Make product-card the anchor point */
   min-height: 100%;
   transition: all 0.3s ease;
+  overflow: visible; /* Allow tooltips to extend outside the card */
 }
 
 .product-card:hover {
@@ -66,6 +67,62 @@
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.85em;
+}
+
+.dept-facil-badge {
+  position: relative;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.85em;
+  cursor: default;
+  margin-left: -5px;
+}
+
+.badge-label {
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Tooltip styling */
+.tooltip-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 180px;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  margin-top: 5px;
+}
+
+.dept-facil-badge:hover .tooltip-content {
+  display: block;
+}
+
+.tooltip-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.tooltip-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tooltip-item {
+  font-size: 0.9em;
+  padding: 2px 0;
 }
 
 .product-description {

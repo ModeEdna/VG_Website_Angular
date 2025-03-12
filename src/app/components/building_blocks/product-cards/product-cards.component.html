@@ -98,16 +98,44 @@
           </div>
           <h2 class="product-title">{{ product.title }}</h2>
           <p class="date">{{ product.date }}</p>
+
+          <!-- Updated departments and facilities with counts and tooltips -->
           <div class="depts-facilities-container">
-            <div class="departments">
-              <span *ngFor="let dept of product.departments">{{ dept }}</span>
+            <div class="dept-facil-badge" *ngIf="product.departments?.length">
+              <span class="badge-label"
+                >Departments: {{ product.departments.length }}</span
+              >
+              <div class="tooltip-content">
+                <div class="tooltip-title">Departments</div>
+                <div class="tooltip-items">
+                  <div
+                    *ngFor="let dept of product.departments"
+                    class="tooltip-item"
+                  >
+                    {{ dept }}
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="facilities">
-              <span *ngFor="let facility of product.facilities">{{
-                facility
-              }}</span>
+
+            <div class="dept-facil-badge" *ngIf="product.facilities?.length">
+              <span class="badge-label"
+                >Facilities: {{ product.facilities.length }}</span
+              >
+              <div class="tooltip-content">
+                <div class="tooltip-title">Facilities</div>
+                <div class="tooltip-items">
+                  <div
+                    *ngFor="let facility of product.facilities"
+                    class="tooltip-item"
+                  >
+                    {{ facility }}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
           <p class="product-description">{{ product.description }}</p>
         </div>
       </a>
