@@ -5,48 +5,63 @@
   height: 100%;
 }
 
-/* Make carousel fill the container but maintain aspect ratio */
+/* Make carousel fill the container with fixed dimensions */
 .carousel {
   width: 100%;
   height: 100%;
+  position: relative; /* Added for proper positioning context */
+  aspect-ratio: 16/9; /* Force a consistent aspect ratio */
 }
 
 /* Fix the height of carousel inner to prevent resizing */
 .carousel-inner {
   height: 100%;
+  position: absolute; /* Position absolutely to maintain size */
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* Style carousel items to maintain consistent height */
 .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
 }
 
-/* Style images inside carousel to maintain aspect ratio without breaking layout */
+/* Style images inside carousel with absolute positioning */
 .carousel-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  margin: 0 auto; /* Center images horizontally */
-  width: 100%; /* Ensure images take full width */
-  height: 100%; /* Ensure images take full height */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the image to fill the space */
 }
 
-/* Style videos to match images */
+/* Style videos to match images with absolute positioning */
 .carousel-item video {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover; /* Change from contain to cover */
-  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%; /* Change from auto to 100% */
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Style text inside carousel items */
 .carousel-item .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.65); /* Semi-transparent dark background */
-  color: white; /* Ensure text is white */
-  padding: 10px; /* Add some padding around the text */
-  border-radius: 5px; /* Optional: Add rounded corners */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  z-index: 2; /* Ensure caption is above images/videos */
 }
 
 /* Ensure carousel controls remain clickable */
@@ -59,6 +74,7 @@
 .carousel-indicators {
   z-index: 10;
   margin-bottom: 0;
+  position: absolute;
 }
 
 .carousel-caption {
