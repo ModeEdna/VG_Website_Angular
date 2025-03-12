@@ -132,6 +132,44 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  position: relative;
+}
+
+/* Description container to properly position the tooltip */
+.description-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Full description tooltip styling */
+.description-tooltip {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  bottom: calc(-30%);
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  border: 1px solid #ddd;
+  max-height: 300px;
+  overflow-y: auto;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  pointer-events: none;
+}
+
+/* Show tooltip after delay */
+.description-container:hover .description-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.8s;
 }
 
 .product-cards-container a {
