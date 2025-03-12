@@ -35,6 +35,96 @@
       "description": "Sample description for a product. Making it longer so we see what it loks like when the text extends past a certain point of no return, as foretold by the people who came before us.",
       "date": "10/23/23",
       "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "5",
+      "title": "HR Benefits Package",
+      "departments": ["HR", "Finance"],
+      "facilities": ["PQ", "CP", "CP2"],
+      "description": "Comprehensive benefits package outlining healthcare, retirement plans, and other employee benefits. This document serves as the official reference for all benefit-related inquiries.",
+      "date": "01/15/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "6",
+      "title": "IT Security Protocol",
+      "departments": ["IT", "Security"],
+      "facilities": ["All"],
+      "description": "Defines security measures and protocols for protecting company data and infrastructure from internal and external threats. Must be reviewed by all employees annually.",
+      "date": "03/07/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "7",
+      "title": "Supply Chain Management",
+      "departments": ["Operations", "Logistics"],
+      "facilities": ["CP", "WH"],
+      "description": "Outlines procedures for managing the flow of goods and services from suppliers to end customers, including inventory control and distribution strategies.",
+      "date": "11/30/23",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "8",
+      "title": "Marketing Campaign Guidelines",
+      "departments": ["Marketing", "Sales"],
+      "facilities": ["HQ", "PQ"],
+      "description": "Strategic framework for developing, implementing and measuring marketing campaigns across different channels and demographics, with focus on brand consistency and ROI tracking.",
+      "date": "05/18/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "9",
+      "title": "Environmental Compliance",
+      "departments": ["Legal", "Operations"],
+      "facilities": ["All"],
+      "description": "Ensures company operations comply with local and international environmental regulations. Includes waste management protocols and sustainability initiatives that all facilities must adhere to.",
+      "date": "02/22/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "10",
+      "title": "Remote Work Policy",
+      "departments": ["HR", "IT", "All"],
+      "facilities": ["All"],
+      "description": "Guidelines for employees working remotely, covering expectations, communication protocols, equipment usage, and security requirements. Updated post-pandemic to reflect new hybrid work models.",
+      "date": "08/01/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "11",
+      "title": "Customer Service Standards",
+      "departments": ["Customer Support", "Sales"],
+      "facilities": ["CP2", "HQ"],
+      "description": "Defines expectations and procedures for customer interactions, complaint resolution, and service quality metrics. Includes scripts for common scenarios and escalation protocols.",
+      "date": "04/12/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "12",
+      "title": "Research & Development Roadmap",
+      "departments": ["R&D", "Engineering"],
+      "facilities": ["PQ", "LAB"],
+      "description": "Strategic plan for product innovation and development over the next three years. Outlines resource allocation, milestone targets, and market analysis for future product lines.",
+      "date": "06/30/24",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "13",
+      "title": "Employee Training Manual",
+      "departments": ["HR", "All"],
+      "facilities": ["All"],
+      "description": "Comprehensive guide for new employee onboarding and continuing education programs. Contains learning paths for various departments and roles within the organization.",
+      "date": "09/15/23",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "14",
+      "title": "Quality Assurance Framework",
+      "departments": ["Quality Control", "Manufacturing"],
+      "facilities": ["CP", "PQ"],
+      "description": "Standards and procedures for ensuring product quality and consistency. Includes testing methodologies, acceptance criteria, and continuous improvement processes.",
+      "date": "05/03/24",
+      "hyperlink": "https://www.google.com"
     }
   ]
 }

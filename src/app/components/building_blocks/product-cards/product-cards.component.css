@@ -87,17 +87,6 @@
   padding: 20px;
 }
 
-/* Header section styling */
-.header-section {
-  margin-bottom: 30px;
-}
-
-.page-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
 /* Controls section styling */
 .controls-section {
   display: flex;
@@ -108,11 +97,18 @@
   margin-bottom: 20px;
 }
 
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* Search bar styling */
 .search-container {
   flex: 1;
   max-width: 400px;
   position: relative;
+  margin-left: 1rem;
 }
 
 .search-input {
@@ -143,7 +139,7 @@
   color: #999;
 }
 
-/* Department filter styling */
+/* Department filter styling - updated for multiple selection */
 .department-filter {
   position: relative;
 }
@@ -158,8 +154,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  min-width: 180px;
-  justify-content: space-between;
 }
 
 .dropdown-content {
@@ -167,7 +161,7 @@
   position: absolute;
   right: 0;
   top: 100%;
-  min-width: 100%;
+  min-width: 200px;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -181,18 +175,26 @@
   display: block;
 }
 
-.dropdown-item {
+.dropdown-content label {
+  display: block;
   padding: 10px 15px;
   cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
 }
 
-.dropdown-item:hover {
+.dropdown-content label:hover {
   background-color: #f5f5f5;
+}
+
+.dropdown-content input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 /* Favorites button styling */
 .favorites-container {
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  margin-right: 1rem;
 }
 
 .favorites-button {

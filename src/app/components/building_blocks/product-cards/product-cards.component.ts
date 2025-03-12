@@ -18,9 +18,9 @@ export class ProductCardsComponent implements OnInit {
   // Search functionality
   searchQuery: string = '';
 
-  // Department filter
+  // Department filter - changed to allow multiple selections
   availableDepartments: string[] = [];
-  selectedDepartment: string | null = null;
+  selectedDepartments: string[] = [];
   showDepartmentDropdown: boolean = false;
 
   // Favorites functionality
@@ -81,10 +81,15 @@ export class ProductCardsComponent implements OnInit {
       );
     }
 
-    // Apply department filter
-    if (this.selectedDepartment) {
+    // Apply department filter - updated for multiple departments
+    if (
+      this.selectedDepartments.length > 0 &&
+      this.selectedDepartments.length !== this.availableDepartments.length
+    ) {
       results = results.filter((product) =>
-        product.departments.includes(this.selectedDepartment)
+        product.departments.some((dept: string) =>
+          this.selectedDepartments.includes(dept)
+        )
       );
     }
 
@@ -114,6 +119,8 @@ export class ProductCardsComponent implements OnInit {
       }
     });
     this.availableDepartments = Array.from(departmentsSet).sort();
+    // Default to all departments selected
+    this.selectedDepartments = [...this.availableDepartments];
   }
 
   // Toggle department dropdown visibility
@@ -130,10 +137,29 @@ export class ProductCardsComponent implements OnInit {
     }
   }
 
-  // Select department
-  selectDepartment(department: string | null): void {
-    this.selectedDepartment = department;
-    this.showDepartmentDropdown = false;
+  // Check if all departments are selected
+  isAllDepartmentsSelected(): boolean {
+    return this.selectedDepartments.length === this.availableDepartments.length;
+  }
+
+  // Toggle all departments selection
+  toggleAllDepartments(): void {
+    if (this.isAllDepartmentsSelected()) {
+      this.selectedDepartments = [];
+    } else {
+      this.selectedDepartments = [...this.availableDepartments];
+    }
+    this.applyFilters();
+  }
+
+  // Toggle a specific department selection
+  toggleDepartment(department: string): void {
+    const index = this.selectedDepartments.indexOf(department);
+    if (index === -1) {
+      this.selectedDepartments.push(department);
+    } else {
+      this.selectedDepartments.splice(index, 1);
+    }
     this.applyFilters();
   }
 

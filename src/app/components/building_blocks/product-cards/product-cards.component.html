@@ -1,44 +1,43 @@
 <div class="product-page-container">
-  <div class="header-section">
-    <h1 class="page-title">Analytic Products</h1>
+  <div class="controls-section">
+    <!-- Search bar on the left -->
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search products..."
+        [(ngModel)]="searchQuery"
+        (input)="applyFilters()"
+      />
+      <i class="search-icon bi bi-search"></i>
+      <button class="clear-search" *ngIf="searchQuery" (click)="clearSearch()">
+        ×
+      </button>
+    </div>
 
-    <div class="controls-section">
-      <!-- Search bar -->
-      <div class="search-container">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Search products..."
-          [(ngModel)]="searchQuery"
-          (input)="applyFilters()"
-        />
-        <i class="search-icon bi bi-search"></i>
-        <button
-          class="clear-search"
-          *ngIf="searchQuery"
-          (click)="clearSearch()"
-        >
-          ×
-        </button>
-      </div>
-
-      <!-- Department filter -->
+    <div class="right-controls">
+      <!-- Department filter - now with multiple selection -->
       <div class="department-filter">
         <button (click)="toggleDepartmentDropdown($event)">
-          {{ selectedDepartment || "All Departments" }}
-          <i class="bi bi-chevron-down"></i>
+          Departments <i class="bi bi-filter"></i>
         </button>
         <div class="dropdown-content" [class.show]="showDepartmentDropdown">
-          <div class="dropdown-item" (click)="selectDepartment(null)">
+          <label>
+            <input
+              type="checkbox"
+              [checked]="isAllDepartmentsSelected()"
+              (change)="toggleAllDepartments()"
+            />
             All Departments
-          </div>
-          <div
-            class="dropdown-item"
-            *ngFor="let dept of availableDepartments"
-            (click)="selectDepartment(dept)"
-          >
+          </label>
+          <label *ngFor="let dept of availableDepartments">
+            <input
+              type="checkbox"
+              [checked]="selectedDepartments.includes(dept)"
+              (change)="toggleDepartment(dept)"
+            />
             {{ dept }}
-          </div>
+          </label>
         </div>
       </div>
 
