@@ -3,31 +3,33 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  height: 86vh;
+  min-height: 86vh; /* Changed from fixed height to minimum height */
   /* background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7); */
 }
 
 .landing-cards-container {
   display: flex;
-  width: 70%;
-  height: 70vh; /* Set a specific height for the container */
-  gap: 2rem;
+  width: 85%; /* Reduced from 100% to 85% for a more compact look */
+  max-width: 1200px; /* Reduced max-width from 1400px */
+  min-height: 70vh; /* Use min-height instead of fixed height */
+  gap: 1.25rem; /* Reduced gap from 2rem for less white space between sections */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .landing-cards-container-left {
-  flex: 1 0 0; /* flex-grow: 1, flex-shrink: 0, flex-basis: 0 */
-  width: 50%;
-  max-width: 50%;
-  min-width: 50%;
-  height: 100%;
+  flex: 1 1 300px; /* Changed to a more responsive flex arrangement */
+  width: auto; /* Remove fixed width */
+  max-width: none; /* Remove fixed max width */
+  min-width: 300px; /* Set a reasonable minimum width */
+  height: auto; /* Change to auto height */
   /* background-color: lightcoral; */
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: left;
-  padding: 2rem;
-  overflow: hidden; /* Handle overflow if needed */
+  justify-content: flex-start; /* Changed from top to flex-start */
+  align-items: stretch; /* Changed from left to stretch */
+  padding: 1.5rem; /* Reduced padding from 2rem */
+  overflow: auto; /* Change from hidden to auto to handle overflow better */
 }
 
 .greeting {
@@ -43,11 +45,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .profile-image img {
-  width: 80px;
-  height: 80px;
+  width: clamp(60px, 8vw, 80px); /* Responsive sizing with clamp */
+  height: clamp(60px, 8vw, 80px);
   border-radius: 50%;
   border: 2px solid #fff;
   margin-right: 1rem;
@@ -56,15 +59,17 @@
 .profile-info {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 200px; /* Ensure text has enough space */
 }
 
 .profile-name {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.2vw, 1.2rem); /* Responsive font size */
 }
 
 .profile-details {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 0.9rem); /* Responsive font size */
   color: #555;
 }
 
@@ -79,6 +84,14 @@
 
 .your-apps {
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Contain children overflow */
+}
+
+.your-apps h5 {
+  margin-bottom: 1rem;
 }
 
 .apps {
@@ -86,14 +99,17 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-left: -1rem;
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+  flex: 1; /* Take remaining space */
+  padding-right: 0.5rem; /* Space for scrollbar */
 }
 
 .landing-cards-container-right {
-  flex: 1 0 0; /* flex-grow: 1, flex-shrink: 0, flex-basis: 0 */
-  width: 50%;
-  max-width: 50%;
-  min-width: 50%;
-  height: 100%;
+  flex: 1 1 300px; /* Changed to a more responsive flex arrangement */
+  width: auto; /* Remove fixed width */
+  max-width: none; /* Remove fixed max width */
+  min-width: 300px; /* Set a reasonable minimum width */
+  height: auto; /* Change to auto height */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -102,6 +118,7 @@
 
 .landing-upper-right {
   flex: 1; /* Take 50% of the height */
+  min-height: 250px; /* Add a minimum height */
   width: 100%;
   background-color: rebeccapurple;
   border-radius: 8px;
@@ -120,6 +137,7 @@
 
 .landing-lower-right {
   flex: 1; /* Take 50% of the height */
+  min-height: 180px; /* Add a minimum height */
   width: 100%;
   border-radius: 8px;
   display: flex;
@@ -190,4 +208,53 @@
 .admin-policy-card *[style*="overflow-x: auto"],
 .admin-policy-card *[style*="overflow-x:auto"] {
   overflow: hidden !important;
+}
+
+/* Add media queries for better responsive behavior */
+@media (max-width: 992px) {
+  .landing-cards-container {
+    width: 90%; /* Slightly wider on medium screens */
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-cards-container {
+    width: 95%; /* Wider on small screens */
+    gap: 1rem;
+  }
+
+  .landing-cards-container-left,
+  .landing-cards-container-right {
+    min-width: 100%; /* Full width on smaller screens */
+  }
+
+  .landing-upper-right,
+  .landing-lower-right {
+    min-height: 200px; /* Smaller height on mobile */
+  }
+
+  .profile {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-container {
+    padding: 0.5rem;
+  }
+
+  .landing-cards-container {
+    width: 98%; /* Almost full width on very small screens */
+  }
+
+  .landing-cards-container-left,
+  .landing-cards-container-right {
+    padding: 1rem;
+  }
+
+  .landing-upper-right,
+  .landing-lower-right {
+    min-height: 180px;
+  }
 }

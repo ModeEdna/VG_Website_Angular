@@ -2,21 +2,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  gap: 0px;
-  /* max-height: 440px; */
+  gap: 8px; /* Reduced gap from 10px */
   overflow-x: hidden;
   overflow-y: auto;
-  margin-top: 1rem;
-  /* height: 70%; */
+  margin-top: 0.75rem; /* Reduced from 1rem */
+  width: 100%;
+  max-height: 400px;
 }
 
 .logo-card {
-  flex: 1 1 22%; /* Ensure four cards per row with some gap */
-  max-width: 22%; /* Ensure four cards per row with some gap */
+  flex: 0 0 calc(25% - 8px); /* Adjusted for smaller gap */
+  min-width: 75px; /* Slightly reduced from 80px */
+  max-width: 110px; /* Reduced from 120px */
   box-sizing: border-box;
   text-align: center;
-  /* background-color: antiquewhite; */
-  /* border: 1px solid #ddd; */
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s;
@@ -34,29 +33,69 @@
 
 .logo-card-content {
   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .logo-image {
   width: auto;
+  height: auto;
+  max-width: 100%;
   max-height: 50px;
+  object-fit: contain; /* Maintain aspect ratio */
 }
 
 .logo-title {
   margin-top: 10px;
   font-size: 0.75rem; /* Decreased text size */
   font-weight: 500;
-  max-height: 40px; /* Adjust as needed */
+  max-height: 40px;
   overflow-y: hidden;
   white-space: normal; /* Allow text to wrap to the next line */
-  /* text-overflow: ellipsis; */
+  width: 100%; /* Take full width of parent */
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .logo-card {
+    flex: 0 0 calc(33.33% - 8px); /* Adjusted for smaller gap */
+  }
+}
+
+@media (max-width: 992px) {
+  .logos-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-card {
+    flex: 0 0 calc(50% - 10px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-card {
+    flex: 0 0 calc(50% - 10px); /* Keep 2 cards per row */
+    min-width: 70px;
+  }
+
+  .logo-image {
+    max-height: 40px;
+  }
 }
 
 @media (max-width: 950px) {
   .logo-title {
-    display: none;
+    display: block; /* Show title on all screen sizes */
+    font-size: 0.7rem;
   }
 
   .logo-image {
-    max-height: 30px;
+    max-height: 35px;
   }
 }
