@@ -20,14 +20,8 @@
   <!-- Regular Desktop Menu -->
   <ul>
     <li><a routerLink="/home">HOME</a></li>
-    <li class="dropdown-container">
-      <button class="dropdown-button">Analytics</button>
-      <div class="dropdown-content">
-        <a routerLink="/analytics" style="--i: 0">Option 1</a>
-        <a routerLink="/analytics" style="--i: 1">Option 2</a>
-        <a routerLink="/analytics" style="--i: 2">Option 3</a>
-      </div>
-    </li>
+    <!-- Changed from dropdown to regular link -->
+    <li><a routerLink="/analytics">ANALYTICS</a></li>
     <li><a routerLink="/learn">LEARN</a></li>
     <li><a routerLink="/policies">POLICIES</a></li>
     <li><a routerLink="/about">ABOUT</a></li>
@@ -43,26 +37,8 @@
 >
   <ul class="mobile-menu">
     <li><a routerLink="/home" (click)="closeMenu()">HOME</a></li>
-    <li class="dropdown-container">
-      <button
-        #mobileDropdownButton
-        class="dropdown-button"
-        (click)="toggleDropdown($event, mobileDropdownButton)"
-      >
-        Analytics
-      </button>
-      <div class="dropdown-content">
-        <a routerLink="/analytics" (click)="closeMenu()" style="--i: 0"
-          >Option 1</a
-        >
-        <a routerLink="/analytics" (click)="closeMenu()" style="--i: 1"
-          >Option 2</a
-        >
-        <a routerLink="/analytics" (click)="closeMenu()" style="--i: 2"
-          >Option 3</a
-        >
-      </div>
-    </li>
+    <!-- Changed from dropdown to regular link in mobile menu -->
+    <li><a routerLink="/analytics" (click)="closeMenu()">ANALYTICS</a></li>
     <li><a routerLink="/learn" (click)="closeMenu()">LEARN</a></li>
     <li><a routerLink="/policies" (click)="closeMenu()">POLICIES</a></li>
     <li><a routerLink="/about" (click)="closeMenu()">ABOUT</a></li>
