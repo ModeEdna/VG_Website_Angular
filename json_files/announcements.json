@@ -1,0 +1,35 @@
+{
+  "announcements": [
+    {
+      "id": "1",
+      "title": "Announcement 1",
+      "hyperlink": "https://www.google.com",
+      "image": "",
+      "video": "../VG_Video.mp4",
+      "announcement": "This is an announcement."
+    },
+    {
+      "id": "2",
+      "title": "Announcement 2",
+      "hyperlink": "https://www.google.com",
+      "image": "../VG_IPO.jpeg",
+      "video": "",
+      "announcement": "This is an announcement 2."
+    },
+    {
+      "id": "3",
+      "title": "Announcement 3",
+      "hyperlink": "https://www.google.com",
+      "image": "",
+      "video": "../CP.mp4",
+      "announcement": "This is an announcement 3."
+    },
+    {
+      "id": "4",
+      "title": "Announcement 4",
+      "hyperlink": "https://www.google.com",
+      "image": "../map.jpeg",
+      "announcement": "This is an announcement 4."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "people": [
+    {
+      "id": "1",
+      "name": "Michelle Cienfuegos",
+      "title": "VP of Applications",
+      "email": "mcienfuegos@venturegloballng.com",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../michelle.jpeg",
+      "bio": "Michelle is a seasoned VP of Applications with over 15 years of experience in the tech industry. She is passionate about developing innovative solutions and leading high-performing teams."
+    },
+    {
+      "id": "2",
+      "name": "Patrick Morales",
+      "title": "Director of BI",
+      "email": "pmorales@venturegloballng.com",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../patrick.jpeg",
+      "bio": "John is a dedicated software engineer with a knack for solving complex problems. He enjoys working with modern web technologies and contributing to open-source projects."
+    },
+    {
+      "id": "3",
+      "name": "Juan Pulas",
+      "title": "Sr. Data Engineer",
+      "email": "jpulas@venturegloballng.com",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../juan.jpeg",
+      "bio": "Jane is a talented software engineer with a strong background in full-stack development. She is passionate about building scalable applications and improving user experiences."
+    },
+    {
+      "id": "4",
+      "name": "Rishitha Koneru",
+      "title": "Data Engineer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../rishitha.jpeg",
+      "bio": "John is an experienced software engineer who excels in backend development. He is committed to writing clean, efficient code and enjoys mentoring junior developers."
+    },
+    {
+      "id": "5",
+      "name": "Alexader Lubyanski",
+      "title": "Sr. Data Scientist",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../sasha.jpeg",
+      "bio": "Jane is a software engineer with a passion for front-end development. She loves creating intuitive user interfaces and staying up-to-date with the latest design trends."
+    },
+    {
+      "id": "6",
+      "name": "Amanda Edmonds",
+      "title": "BI Applications",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../amanda.jpeg",
+      "bio": "John is a versatile software engineer with expertise in both front-end and back-end technologies. He enjoys tackling challenging projects and collaborating with cross-functional teams."
+    },
+    {
+      "id": "7",
+      "name": "Eduardo Armenta",
+      "title": "Website Lord",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../edy.jpeg",
+      "bio": "Jane is a skilled software engineer with a focus on developing robust web applications. She is dedicated to continuous learning and enjoys experimenting with new technologies."
+    },
+    {
+      "id": "8",
+      "name": "Swetha Bingi",
+      "title": "Sr. BI Developer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../swetha.jpeg",
+      "bio": "John is a proficient software engineer with a strong foundation in computer science. He is passionate about optimizing performance and ensuring code quality."
+    },
+    {
+      "id": "9",
+      "name": "Teresa Hamill",
+      "title": "Sr. Data Scientist",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../teresa.jpeg",
+      "bio": "Jane is a dedicated software engineer with a love for coding and problem-solving. She enjoys working on innovative projects and contributing to team success."
+    },
+    {
+      "id": "10",
+      "name": "Jules Kenne",
+      "title": "Data Analyst",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../jules.jpeg",
+      "bio": "John is a software engineer with a passion for developing high-quality software solutions. He is always eager to learn new technologies and improve his skills."
+    },
+    {
+      "id": "11",
+      "name": "Luis Something",
+      "title": "Sr. BI Developer",
+      "email": "",
+      "skills": ["JavaScript", "React", "Node.js", "Express", "MongoDB"],
+      "availability": "7am-7pm",
+      "location": "San Francisco, CA",
+      "phone": "415-555-5555",
+      "image": "../business.png",
+      "bio": "Jane is a software engineer with a strong focus on user-centered design. She is passionate about creating seamless user experiences and writing clean, maintainable code."
+    }
+  ]
+}

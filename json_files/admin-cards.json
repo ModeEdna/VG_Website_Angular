@@ -1,0 +1,32 @@
+{
+  "adminCards": [
+    {
+      "id": "1",
+      "title": "Products",
+      "icon": "/online-shop.png",
+      "description": "Add or edit products",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "2",
+      "title": "Facilities, Departments, and Security Groups",
+      "icon": "/world-wide-web.png",
+      "description": "Add, edit, remove facilities, departments, or security groups.",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "3",
+      "title": "Policies and Procedures",
+      "icon": "/portfolio.png",
+      "description": "Add and manage policies and procedures",
+      "hyperlink": "https://www.google.com"
+    },
+    {
+      "id": "4",
+      "title": "Additional Admin Resource",
+      "icon": "/cooperation.png",
+      "description": "Testing to see overflow in x and y direction. Adding more text to see what happens.",
+      "hyperlink": "https://www.google.com"
+    }
+  ]
+}
